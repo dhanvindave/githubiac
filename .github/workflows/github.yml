@@ -65,7 +65,7 @@ jobs:
 
     - name: List Files
       run: |
-        ls ./SarifFiles -all
+        cd ./SarifFiles && ls -all
         ls -all
 
     - name: Store SARIF results as Build Artifact
