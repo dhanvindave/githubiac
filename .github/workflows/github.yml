@@ -63,6 +63,10 @@ jobs:
         name: assets-for-download
         path: ./logs/
 
+    - name: List Files
+      run: |
+        ls -all
+
     - name: Store SARIF results as Build Artifact
       uses: actions/upload-artifact@v1
       with:
