@@ -14,7 +14,7 @@ provider "aws" {
 
 locals { 
   encrypted = false
-  disable_api_termination = true
+  disable_api_termination = false
   health_check_type = "ELB"
   vpc_zone_identifier = ["ez"]
 }
