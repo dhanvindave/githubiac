@@ -1,0 +1,75 @@
+name: 'IAC Assist Terraform Action'
+
+on: 
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Do you want to process all files?'
+        required: false
+        default: 'Yes - All Files'
+        type: choice
+        options:
+        - Yes - All Files
+        - No - Only Last Commit Files
+  push:
+    branches: ["main"]
+
+jobs:
+  
+  analysis:
+    permissions: write-all
+    runs-on: [ubuntu-latest]
+   
+    steps:
+    - name: checkout version
+      uses: actions/checkout@v3
+      
+    - name: Use Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        
+    - name: Clone parser repo
+      uses: actions/checkout@v3
+      with:
+        repository: DaveChintan/tmhclparser
+        token: ${{ secrets.GH_PAT }}
+        path: parser
+        ref: sarif
+        
+    - name: Get all changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v36
+      with:
+        separator: ","
+        json: true
+        write_output_files: true
+        
+    - name: Update env
+      run: |
+        echo "CHANGED_FILES=${{ steps.changed-files.outputs.all_modified_files }}" >> "$GITHUB_ENV"
+        echo "FULL_SCAN=${{ github.event.inputs.reason != 'No - Only Last Commit Files' }}" >> "$GITHUB_ENV"
+        echo "API_KEY=${{ secrets.TMDEV5_APIKEY }}" >> "$GITHUB_ENV"
+        echo "BASE_URL=${{ secrets.BASE_URL }}" >> "$GITHUB_ENV"
+        
+        
+    - name: Run parser
+      run: |
+        node ./parser/main.js
+         
+    - name: Store logs results as Build Artifact
+      uses: actions/upload-artifact@v2
+      with: 
+        name: assets-for-download
+        path: ./logs/
+
+    - name: Store SARIF results as Build Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: IAC_SARIF_Results
+        path: ./SarifFiles/
+     
+    -  name: Upload SARIF results to Github
+       uses: github/codeql-action/upload-sarif@v2      
+       with:
+         sarif_file: ./SarifFiles/     
