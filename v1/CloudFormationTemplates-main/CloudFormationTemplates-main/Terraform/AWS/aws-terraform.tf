@@ -36,7 +36,7 @@ resource "aws_instance" "web" {
   instance_type     = "t2.micro"
   disable_api_termination = false
   tags = {
-    Name = "HelloWorld"
+    Name = "HelloWorldff"
   }
 }
 
