@@ -1,0 +1,13 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Resources" : {
+        "mySession": {
+            "Type": "AWS::Macie::Session",
+            "Properties": {
+            "FindingPublishingFrequency": "ONE_HOUR",
+                "Status": "ENABLED"
+        }
+          }
+          
+    }  
+ }

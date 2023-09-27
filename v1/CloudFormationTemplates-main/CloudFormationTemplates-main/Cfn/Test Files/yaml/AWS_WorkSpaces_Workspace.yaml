@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+ mydetector:
+    Type: AWS::WorkSpaces::Workspace
+    Properties: 
+      BundleId: String
+      DirectoryId: String
+      RootVolumeEncryptionEnabled: True
+      Tags: 
+        - Tag
+      UserName: String
+      UserVolumeEncryptionEnabled: True
+      VolumeEncryptionKey: String
+      WorkspaceProperties: 
+        WorkspaceProperties
+
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.

@@ -1,0 +1,21 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "myBasicEndpoint": {
+            "Type": "AWS::DMS::Endpoint",
+            "Properties": {
+                "SslMode": "require",
+                "CertificateArn": "asd",
+                "EngineName": "mysql",
+                "EndpointType": "source",
+                "Username": "username",
+                "Password": {
+                    "Ref": "PasswordParameter"
+                },
+                "ServerName": "source.db.amazon.com",
+                "Port": 1234, 
+                "DatabaseName": "source-db"
+            }
+        }
+    }
+}

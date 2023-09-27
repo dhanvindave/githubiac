@@ -1,0 +1,405 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Static contents distribution using S3 and CloudFront.",
+    "Parameters": {
+        "CachePolicy": {
+            "Description": "Change this if you want to specify a cache policy.",
+            "Type": "String",
+            "Default": "CachingOptimized",
+            "AllowedValues": [
+                "CachingOptimized",
+                "CachingDisabled",
+                "CachingOptimizedForUncompressedObjects",
+                "Elemental-MediaPackage",
+                "Amplify"
+            ]
+        }
+    },
+    "Mappings": {
+        "CachePolicyIds": {
+            "CachingOptimized": {
+                "Id": "658327ea-f89d-4fab-a63d-7e88639e58f6"
+            },
+            "CachingDisabled": {
+                "Id": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad"
+            },
+            "CachingOptimizedForUncompressedObjects": {
+                "Id": "b2884449-e4de-46a7-ac36-70bc7f1ddd6d"
+            },
+            "Elemental-MediaPackage": {
+                "Id": "08627262-05a9-4f76-9ded-b50ca2e3a84f"
+            },
+            "Amplify": {
+                "Id": "2e54312d-136d-493c-8eb9-b001f22f67d2"
+            }
+        }
+    },
+    "Resources": {
+        "AssetsBucket": {
+            "Type": "AWS::S3::Bucket",
+            "DeletionPolicy": "Retain",
+            "UpdateReplacePolicy": "Retain",
+            "Properties": {
+                "WebsiteConfiguration": "",
+                "ObjectLockConfiguration": {
+                    "ObjectLockEnabled": "Enabled",
+                    "Rule": {
+                        "DefaultRetention": {
+                            "Mode": "COMPLIANCE"
+                        }
+                    }
+                },
+                "ObjectLockEnabled": "true",
+                "VersioningConfiguration": {
+                    "Status": "Enabled"
+                },
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Status": "Enabled",
+                            "Transitions": [
+                                {
+                                    "StorageClass": "GLACIER"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "AccessControl": "Private",
+                "ReplicationConfiguration": {
+                    "Rules": [
+                        {
+                            "Destination": {
+                                "Bucket": "sasfsa"
+                            },
+                            "Status": "Enabled"
+                        }
+                    ]
+                },
+                "BucketEncryption": {
+                    "ServerSideEncryptionConfiguration": [
+                        {
+                            "BucketKeyEnabled": "true",
+                            "ServerSideEncryptionByDefault": {
+                                "SSEAlgorithm": "AES256"
+                            }
+                        }
+                    ]
+                },
+                "PublicAccessBlockConfiguration": {
+                    "BlockPublicAcls": true,
+                    "BlockPublicPolicy": true,
+                    "IgnorePublicAcls": true,
+                    "RestrictPublicBuckets": true
+                },
+                "LoggingConfiguration": {
+                    "DestinationBucketName": "AccessLogBucket",
+                    "LogFilePrefix": "origin/"
+                }
+            }
+        },
+        "AssetsBucketPolicy": {
+            "Type": "AWS::S3::BucketPolicy",
+            "Properties": {
+                "Bucket": {
+                    "Ref": "AssetsBucket"
+                },
+                "PolicyDocument": {
+                    "Statement": [
+                        {
+                            "Action": "s3:GetObject",
+                            "Effect": "Allow",
+                            "Resource": {
+                                "Fn::Sub": "${AssetsBucket.Arn}/*"
+                            },
+                            "Principal": "k",
+                            "Condition": {
+                                "StringEquals": {
+                                    "AWS:SourceArn": {
+                                        "Fn::Sub": "arn:aws:cloudfront::${AWS::AccountId}:distribution/${AssetsDistribution}"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Effect": "Deny",
+                            "Principal": "hb",
+                            "Action": "s3:*",
+                            "Resource": [
+                                {
+                                    "Fn::Sub": "${AssetsBucket.Arn}/*"
+                                },
+                                {
+                                    "Fn::GetAtt": [
+                                        "AssetsBucket",
+                                        "Arn"
+                                    ]
+                                }
+                            ],
+                            "Condition": {
+                                "Bool": {
+                                    "aws:SecureTransport": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "AccessLogBucket": {
+            "Type": "AWS::S3::Bucket",
+            "DeletionPolicy": "Retain",
+            "UpdateReplacePolicy": "Retain",
+            "Properties": {
+                "WebsiteConfiguration": "",
+                "ObjectLockConfiguration": {
+                    "ObjectLockEnabled": "Enabled",
+                    "Rule": {
+                        "DefaultRetention": {
+                            "Mode": "COMPLIANCE"
+                        }
+                    }
+                },
+                "ObjectLockEnabled": "true",
+                "LoggingConfiguration": {
+                    "DestinationBucketName": "asdsad"
+                },
+                "VersioningConfiguration": {
+                    "Status": "Enabled"
+                },
+                "ReplicationConfiguration": {
+                    "Rules": [
+                        {
+                            "Destination": {
+                                "Bucket": "asd"
+                            },
+                            "Status": "Enabled"
+                        }
+                    ]
+                },
+                "AccessControl": "LogDeliveryWrite",
+                "BucketEncryption": {
+                    "ServerSideEncryptionConfiguration": [
+                        {
+                            "BucketKeyEnabled": "true",
+                            "ServerSideEncryptionByDefault": {
+                                "SSEAlgorithm": "AES256"
+                            }
+                        }
+                    ]
+                },
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Id": "Retain2yrs",
+                            "Status": "Enabled",
+                            "ExpirationInDays": 730,
+                            "Transitions": [
+                                {
+                                    "StorageClass": "STANDARD_IA",
+                                    "TransitionInDays": 30
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "PublicAccessBlockConfiguration": {
+                    "BlockPublicAcls": true,
+                    "BlockPublicPolicy": true,
+                    "IgnorePublicAcls": true,
+                    "RestrictPublicBuckets": true
+                }
+            }
+        },
+        "AccessLogBucketPolicy": {
+            "Type": "AWS::S3::BucketPolicy",
+            "Properties": {
+                "Bucket": {
+                    "Ref": "AccessLogBucket"
+                },
+                "PolicyDocument": {
+                    "Statement": [
+                        {
+                            "Effect": "Deny",
+                            "Principal": "jjn",
+                            "Action": "s3:*",
+                            "Resource": [
+                                {
+                                    "Fn::Sub": "${AccessLogBucket.Arn}/*"
+                                },
+                                {
+                                    "Fn::GetAtt": [
+                                        "AccessLogBucket",
+                                        "Arn"
+                                    ]
+                                }
+                            ],
+                            "Condition": {
+                                "Bool": {
+                                    "aws:SecureTransport": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "AssetsDistribution": {
+            "Type": "AWS::CloudFront::Distribution",
+            "Properties": {
+                "DistributionConfig": {
+                    "OriginGroups": {
+                        "Items": [
+                            "asdsaf"
+                        ]
+                    },
+                    "Restrictions": {
+                        "GeoRestriction": {
+                            "Locations": [
+                                "GA"
+                            ],
+                            "RestrictionType": "whitelist"
+                        }
+                    },
+                    "WebACLId": "asds",
+                    "CustomErrorResponses": [
+                        {
+                            "ErrorCode": "402"
+                        }
+                    ],
+                    "Origins": [
+                        {
+                            "Id": "S3Origin",
+                            "DomainName": {
+                                "Fn::GetAtt": [
+                                    "AssetsBucket",
+                                    "DomainName"
+                                ]
+                            },
+                            "S3OriginConfig": {
+                                "OriginAccessIdentity": ""
+                            },
+                            "OriginAccessControlId": {
+                                "Fn::GetAtt": [
+                                    "CloudFrontOriginAccessControl",
+                                    "Id"
+                                ]
+                            }
+                        }
+                    ],
+                    "Enabled": true,
+                    "DefaultRootObject": "index.html",
+                    "Comment": {
+                        "Fn::Sub": "${AWS::StackName} distribution"
+                    },
+                    "DefaultCacheBehavior": {
+                        "FieldLevelEncryptionId": "asdad",
+                        "CachePolicyId": {
+                            "Fn::FindInMap": [
+                                "CachePolicyIds",
+                                {
+                                    "Ref": "CachePolicy"
+                                },
+                                "Id"
+                            ]
+                        },
+                        "TargetOriginId": "S3Origin",
+                        "ViewerProtocolPolicy": "redirect-to-https"
+                    },
+                    "HttpVersion": "http2",
+                    "ViewerCertificate": {
+                        "MinimumProtocolVersion": "TLSv1.2_2021",
+                        "CloudFrontDefaultCertificate": true
+                    },
+                    "IPV6Enabled": false,
+                    "Logging": {
+                        "Bucket": {
+                            "Fn::GetAtt": [
+                                "AccessLogBucket",
+                                "DomainName"
+                            ]
+                        },
+                        "IncludeCookies": false,
+                        "Prefix": "cloudfront/"
+                    }
+                }
+            }
+        },
+        "CloudFrontOriginAccessControl": {
+            "Type": "AWS::CloudFront::OriginAccessControl",
+            "Properties": {
+                "OriginAccessControlConfig": {
+                    "Description": "Default Origin Access Control",
+                    "Name": {
+                        "Ref": "AWS::StackName"
+                    },
+                    "OriginAccessControlOriginType": "s3",
+                    "SigningBehavior": "always",
+                    "SigningProtocol": "sigv4"
+                }
+            }
+        },
+        "StaticSiteDeployPolicy": {
+            "Type": "AWS::IAM::ManagedPolicy",
+            "Properties": {
+                "Description": "Policy for CI/CD bot user",
+                "ManagedPolicyName": {
+                    "Fn::Join": [
+                        "-",
+                        [
+                            {
+                                "Ref": "AWS::StackName"
+                            },
+                            "policy"
+                        ]
+                    ]
+                },
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:PutObject",
+                                "s3:ListBucket",
+                                "cloudfront:CreateInvalidation"
+                            ],
+                            "Resource": [
+                                {
+                                    "Fn::Sub": "arn:aws:cloudfront::${AWS::AccountId}:distribution/${AssetsDistribution}"
+                                },
+                                {
+                                    "Fn::Sub": "${AssetsBucket.Arn}/*"
+                                },
+                                {
+                                    "Fn::GetAtt": [
+                                        "AssetsBucket",
+                                        "Arn"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "URL": {
+            "Value": {
+                "Fn::Join": [
+                    "",
+                    [
+                        "https://",
+                        {
+                            "Fn::GetAtt": [
+                                "AssetsDistribution",
+                                "DomainName"
+                            ]
+                        }
+                    ]
+                ]
+            }
+        }
+    }
+}

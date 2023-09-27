@@ -1,0 +1,302 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A sample template for VPC with one public and one private subnet",
+    "Parameters": {
+        "petClinicPublicSSHKey": {
+            "Default": "pc-public",
+            "Description": "Name of an existing EC2 KeyPair to enable SSH access into ec2 instance on public subnet",
+            "Type": "AWS::EC2::KeyPair::KeyName"
+        },
+        "petClinicPrivateSSHKey": {
+            "Default": "pc-private",
+            "Description": "Name of an existing EC2 KeyPair to enable SSH access into ec2 instance on private subnet",
+            "Type": "AWS::EC2::KeyPair::KeyName"
+        },
+        "amazonEc2AMIId": {
+            "Default": "ami-0217a85e28e625474",
+            "Type": "String"
+        },
+        "instanceType": {
+            "Default": "t2.micro",
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "petClinicVPC": {
+            "Type": "AWS::EC2::VPC",
+            "Properties": {
+                "CidrBlock": "172.20.0.0/16",
+                "EnableDnsSupport": "false",
+                "EnableDnsHostnames": "false",
+                "InstanceTenancy": "default",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "pc-vpc"
+                    }
+                ]
+            }
+        },
+        "publicRouteTable": {
+            "Type": "AWS::EC2::RouteTable",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "petClinicVPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "pc-public-route-table"
+                    }
+                ]
+            }
+        },
+        "privateRouteTable": {
+            "Type": "AWS::EC2::RouteTable",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "petClinicVPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "pc-private-route-table"
+                    }
+                ]
+            }
+        },
+        "petClinicPublicSubnet": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "petClinicVPC"
+                },
+                "CidrBlock": "172.20.10.0/24",
+                "AvailabilityZone": "ap-south-1a",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "pc-public-subnet"
+                    }
+                ]
+            }
+        },
+        "petClinicPrivateSubnet": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "petClinicVPC"
+                },
+                "CidrBlock": "172.20.20.0/24",
+                "AvailabilityZone": "ap-south-1a",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "pc-private-subnet"
+                    }
+                ]
+            }
+        },
+        "petClinicInternetGateway": {
+            "Type": "AWS::EC2::InternetGateway",
+            "Properties": {
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "pc-internet-gateway"
+                    }
+                ]
+            }
+        },
+        "GatewayToInternet": {
+            "Type": "AWS::EC2::VPCGatewayAttachment",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "petClinicVPC"
+                },
+                "InternetGatewayId": {
+                    "Ref": "petClinicInternetGateway"
+                }
+            }
+        },
+        "myRoute": {
+            "Type": "AWS::EC2::Route",
+            "DependsOn": "GatewayToInternet",
+            "Properties": {
+                "RouteTableId": {
+                    "Ref": "publicRouteTable"
+                },
+                "DestinationCidrBlock": "0.0.0.0/0",
+                "GatewayId": {
+                    "Ref": "petClinicInternetGateway"
+                }
+            }
+        },
+        "mySubnetRouteTableAssociation": {
+            "Type": "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties": {
+                "SubnetId": {
+                    "Ref": "petClinicPublicSubnet"
+                },
+                "RouteTableId": {
+                    "Ref": "publicRouteTable"
+                }
+            }
+        },
+        "privateSubnetRouteTableAssociation": {
+            "Type": "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties": {
+                "SubnetId": {
+                    "Ref": "petClinicPrivateSubnet"
+                },
+                "RouteTableId": {
+                    "Ref": "privateRouteTable"
+                }
+            }
+        },
+        "InstanceSecurityGroup": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupDescription": "Allow http to client host",
+                "VpcId": {
+                    "Ref": "petClinicVPC"
+                },
+                "SecurityGroupIngress": [
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": 80,
+                        "ToPort": 80,
+                        "CidrIp": "0.0.0.0/0"
+                    },
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": 22,
+                        "ToPort": 22,
+                        "CidrIp": "103.254.55.69/32"
+                    }
+                ]
+            }
+        },
+        "privateInstanceSecurityGroup": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupDescription": "To allow traffic from public to private subnet",
+                "VpcId": {
+                    "Ref": "petClinicVPC"
+                },
+                "SecurityGroupIngress": [
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": 80,
+                        "ToPort": 80,
+                        "CidrIp": "0.0.0.0/0"
+                    },
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": 22,
+                        "ToPort": 22,
+                        "CidrIp": "172.20.10.0/24"
+                    }
+                ]
+            }
+        },
+        "Ec2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "Monitoring": "true",
+                "DisableApiTermination": "true",
+                "ImageId": {
+                    "Ref": "amazonEc2AMIId"
+                },
+                "KeyName": {
+                    "Ref": "petClinicPublicSSHKey"
+                },
+                "InstanceType": {
+                    "Ref": "instanceType"
+                },
+                "NetworkInterfaces": [
+                    {
+                        "AssociatePublicIpAddress": "true",
+                        "DeviceIndex": "0",
+                        "GroupSet": [
+                            {
+                                "Ref": "InstanceSecurityGroup"
+                            }
+                        ],
+                        "SubnetId": {
+                            "Ref": "petClinicPublicSubnet"
+                        }
+                    }
+                ]
+            }
+        },
+        "NAT": {
+            "Type": "AWS::EC2::NatGateway",
+            "Properties": {
+                "AllocationId": {
+                    "Fn::GetAtt": [
+                        "EIP",
+                        "AllocationId"
+                    ]
+                },
+                "SubnetId": {
+                    "Ref": "petClinicPrivateSubnet"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "pc-nat-gateway"
+                    }
+                ]
+            }
+        },
+        "EIP": {
+            "Type": "AWS::EC2::EIP",
+            "Properties": {
+                "Domain": "vpc"
+            }
+        },
+        "privateRoute": {
+            "Type": "AWS::EC2::Route",
+            "Properties": {
+                "RouteTableId": {
+                    "Ref": "privateRouteTable"
+                },
+                "DestinationCidrBlock": "0.0.0.0/0",
+                "NatGatewayId": {
+                    "Ref": "NAT"
+                }
+            }
+        },
+        "privateEc2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "Monitoring": "true",
+                "DisableApiTermination": "true",
+                "ImageId": {
+                    "Ref": "amazonEc2AMIId"
+                },
+                "KeyName": {
+                    "Ref": "petClinicPrivateSSHKey"
+                },
+                "InstanceType": {
+                    "Ref": "instanceType"
+                },
+                "SubnetId": {
+                    "Ref": "petClinicPrivateSubnet"
+                },
+                "SecurityGroupIds": [
+                    {
+                        "Ref": "privateInstanceSecurityGroup"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "ec2-in-private-subnet"
+                    }
+                ]
+            }
+        }
+    }
+}

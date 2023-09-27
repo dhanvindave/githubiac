@@ -1,0 +1,65 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Create a complex, single-instance Amazon MQ for ActiveMQ broker",
+    "Resources": {
+        "ComplexBroker": {
+            "Type": "AWS::AmazonMQ::Broker",
+            "Properties": {
+                "AutoMinorVersionUpgrade": "true",
+                "BrokerName": "MyComplexActiveBroker",
+                "Configuration": {
+                    "Id": {
+                        "Ref": "Configuration1"
+                    },
+                    "Revision": {
+                        "Fn::GetAtt": [
+                            "Configuration1",
+                            "Revision"
+                        ]
+                    }
+                },
+                "DeploymentMode": "ACTIVE_STANDBY_MULTI_AZ",
+                "EngineType": "RABBITMQ",
+                "EngineVersion": "5.15.0",
+                "HostInstanceType": "mq.t2.micro",
+                "Logs": {
+                    "Audit": "true",
+                    "General": "true"
+                },
+                "MaintenanceWindowStartTime": {
+                    "DayOfWeek": "Monday",
+                    "TimeOfDay": "22:45",
+                    "TimeZone": "America/Los_Angeles"
+                },
+                "PubliclyAccessible": "false",
+                "SecurityGroups": [
+                    "sg-a1b234cd",
+                    "sg-e5f678gh"
+                ],
+                "SubnetIds": [
+                    "subnet-12a3b45c",
+                    "subnet-67d8e90f"
+                ],
+                "Users": [
+                    {
+                        "ConsoleAccess": "true",
+                        "Password": "AmazonMqPassword",
+                        "Username": "AmazonMqUsername"
+                    },
+                    {
+                        "Password": "AmazonMqPassword2",
+                        "Username": "AmazonMqUsername2"
+                    },
+                    {
+                        "Groups": [
+                            "MyGroup1",
+                            "MyGroup2"
+                        ],
+                        "Password": "AmazonMqPassword3",
+                        "Username": "AmazonMqUsername3"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,978 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "AB73FF78-0D66-43AE-80DE-FAF2DE7CA97F",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "DDos Protection Plan not enabled for virtual network"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "e7f2e62aa4da87234d48d33e72904de2"
+          }
+        },
+        {
+          "ruleId": "C0B56830-C32B-40B1-A1EB-C45BEC9C780C",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Subnet within virtual network should be associated with route table, NSG, or NAT gateway"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "1cfe90f4f1784e86b91d31d971e26264"
+          }
+        },
+        {
+          "ruleId": "D138FFB1-EA0D-4C1F-93BD-9F82B84478EA",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Virtual Networks must use Azure Firewall"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "af8fcc57cb209fa2f18b4f724f8a794a"
+          }
+        },
+        {
+          "ruleId": "B7545C01-9287-4FF0-90A6-968106CB3E14",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Subnet must use Virtual Network Service Endpoints"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3095d7456f596cebdc3cca2260cf0ea3"
+          }
+        },
+        {
+          "ruleId": "FEFAAA6C-582F-461F-9AC9-B9F0B1625644",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Public IP Addresses should have diagnostic logs"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "ef4d7646d74a2f48119bc2246be5cf35"
+          }
+        },
+        {
+          "ruleId": "39B543E3-8CF6-4BA1-9873-072F918B27B2",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Network Security Group should have diagnostic logs"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "15c22e8abe97c53e2f3139fd55a47d83"
+          }
+        },
+        {
+          "ruleId": "B5580E58-E899-4672-9E6E-C9766135AE46",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "IP Forwarding enabled on Network Interface"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "a04039b167abc1b2b78123c6245ff696"
+          }
+        },
+        {
+          "ruleId": "B853B72C-3D8B-4B11-83B3-E1E7D6C3FF6C",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "HTTPS only not enforced for SAS on Storage Account"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "1c0a345272371a89076700bef7b49293"
+          }
+        },
+        {
+          "ruleId": "12ADE5F9-2FA5-4343-821B-96C639157741",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "Secure Transfer not enabled for Storage Account"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "0f71d38479335b0f12593d41a59881d6"
+          }
+        },
+        {
+          "ruleId": "8AF07574-E748-4FE2-878D-4EA67BA4F73A",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "Default Network Access Rule for Storage Account not set to Deny"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "42cdb37638bec7bbb8822185a11e9271"
+          }
+        },
+        {
+          "ruleId": "C5357388-9B3B-49AF-A894-3A259FC67A88",
+          "ruleIndex": 10,
+          "level": "error",
+          "message": {
+            "text": "Logging not enabled for storage account"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "fc4b75f0fe916e4d85bff4f6402cb6ce"
+          }
+        },
+        {
+          "ruleId": "1EFF686C-1828-4B22-A00D-A330DB1B2904",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "Soft Delete not enabled for storage account"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "bce4d2a4f21ac0b00fbb46ee0945868c"
+          }
+        },
+        {
+          "ruleId": "50F12205-4FE0-47B8-917A-CAC2CBD546CC",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "Storage account should geo-replicate"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "36a81113389635dabd11007a5d307252"
+          }
+        },
+        {
+          "ruleId": "B8608BC3-7309-4AA4-817F-4B8AEA885C03",
+          "ruleIndex": 13,
+          "level": "error",
+          "message": {
+            "text": "Immutable Blob Storage not enabled for Storage Account"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "5695539bdedc243734df2f13dc0a4604"
+          }
+        },
+        {
+          "ruleId": "2514B938-A250-474A-829E-18AD6A8F6ACF",
+          "ruleIndex": 14,
+          "level": "error",
+          "message": {
+            "text": "Managed identity not system-assigned on Linux VM"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "cdbcd42e1171d68aa6fe7f6b0633e7f2"
+          }
+        },
+        {
+          "ruleId": "9FC08A73-269A-4C2C-9BDB-EFA0165156E4",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "Disk not encrypted on Linux VM"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "8d4a313a38721b5bc4401ebb3c0e32f6"
+          }
+        },
+        {
+          "ruleId": "0EA23566-2FC0-422B-AF9E-42FF4E318B35",
+          "ruleIndex": 16,
+          "level": "error",
+          "message": {
+            "text": "Premium SSD used on Linux VM"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 155,
+                  "startColumn": 29,
+                  "endLine": 155
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "919d7c9065c8db8dae91b2067e607a8e"
+          }
+        },
+        {
+          "ruleId": "F20648F3-C6E0-4FA6-960D-BCF75E6A6C16",
+          "ruleIndex": 17,
+          "level": "error",
+          "message": {
+            "text": "Availability Set not used for Linux VM"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "328e2990bf2b6cfe38d7652b53a35451"
+          }
+        },
+        {
+          "ruleId": "07D8DCB1-98B9-42FA-99A8-33DD7BB397E8",
+          "ruleIndex": 18,
+          "level": "error",
+          "message": {
+            "text": "Autoscale not configured on Linux VM"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "c91d9e2c86fb802b3121facdcffc1c14"
+          }
+        },
+        {
+          "ruleId": "2D884717-EEFC-4AAE-8CFB-3C3B40D68C0E",
+          "ruleIndex": 19,
+          "level": "error",
+          "message": {
+            "text": "No Active Directory authentication extension for Linux VM"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "033c344392e718d493603310d489851c"
+          }
+        },
+        {
+          "ruleId": "A54DC06F-8EB9-40F5-BF9C-FFFB9DE34F0D",
+          "ruleIndex": 20,
+          "level": "error",
+          "message": {
+            "text": "No guest configuration extension for Linux VM"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "79c2bafda1a8565a52c9225af6abb607"
+          }
+        },
+        {
+          "ruleId": "C25B6E59-8945-4092-9A5A-86E820362823",
+          "ruleIndex": 21,
+          "level": "error",
+          "message": {
+            "text": "Linux VM should be deployed in subnet protected by a NSG"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "4084c3a66864a5acca5a78ead44fbc5c"
+          }
+        },
+        {
+          "ruleId": "1AFB18E6-9387-4734-AF31-0AB02CC1BBE8",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Backups not enabled for Linux Virtual Machine"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "7d7505b0be919458301154674f127aa0"
+          }
+        },
+        {
+          "ruleId": "A2843127-B261-4AAD-90B8-97EEDC9BE134",
+          "ruleIndex": 23,
+          "level": "error",
+          "message": {
+            "text": "No geo-redundant backup for MySQL server"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///Azure",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 195,
+                  "startColumn": 39,
+                  "endLine": 195
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "fb4320bf81b11f35f107f1c57b2c909a"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "IaC Assist Demo",
+          "version": "1.0",
+          "semanticVersion": "1.0",
+          "rules": [
+            {
+              "id": "AB73FF78-0D66-43AE-80DE-FAF2DE7CA97F",
+              "name": "EnableDDoSProtection",
+              "fullDescription": {
+                "text": "EnableDDoSProtection"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "C0B56830-C32B-40B1-A1EB-C45BEC9C780C",
+              "name": "DesignSubnetsforVirtualNetworks",
+              "fullDescription": {
+                "text": "DesignSubnetsforVirtualNetworks"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "D138FFB1-EA0D-4C1F-93BD-9F82B84478EA",
+              "name": "UseFirewallVirtualNetwork",
+              "fullDescription": {
+                "text": "UseFirewallVirtualNetwork"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "B7545C01-9287-4FF0-90A6-968106CB3E14",
+              "name": "SubnetServiceEndpoints",
+              "fullDescription": {
+                "text": "SubnetServiceEndpoints"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "FEFAAA6C-582F-461F-9AC9-B9F0B1625644",
+              "name": "PublicIPLogMonitoring",
+              "fullDescription": {
+                "text": "PublicIPLogMonitoring"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "39B543E3-8CF6-4BA1-9873-072F918B27B2",
+              "name": "NSGDiagnosticLogs",
+              "fullDescription": {
+                "text": "NSGDiagnosticLogs"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "B5580E58-E899-4672-9E6E-C9766135AE46",
+              "name": "DisableIPForwarding",
+              "fullDescription": {
+                "text": "DisableIPForwarding"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "B853B72C-3D8B-4B11-83B3-E1E7D6C3FF6C",
+              "name": "HTTPSOnlySAS",
+              "fullDescription": {
+                "text": "HTTPSOnlySAS"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "12ADE5F9-2FA5-4343-821B-96C639157741",
+              "name": "SecureTransfer",
+              "fullDescription": {
+                "text": "SecureTransfer"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "8AF07574-E748-4FE2-878D-4EA67BA4F73A",
+              "name": "DenyDefaultStorageAccountNetworkAccess",
+              "fullDescription": {
+                "text": "DenyDefaultStorageAccountNetworkAccess"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "C5357388-9B3B-49AF-A894-3A259FC67A88",
+              "name": "EnableQueueStorageLogging",
+              "fullDescription": {
+                "text": "EnableQueueStorageLogging"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "1EFF686C-1828-4B22-A00D-A330DB1B2904",
+              "name": "EnableSoftDelete",
+              "fullDescription": {
+                "text": "EnableSoftDelete"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "50F12205-4FE0-47B8-917A-CAC2CBD546CC",
+              "name": "StorageAccountGeoReplication",
+              "fullDescription": {
+                "text": "StorageAccountGeoReplication"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "B8608BC3-7309-4AA4-817F-4B8AEA885C03",
+              "name": "ImmutableBlobStorage",
+              "fullDescription": {
+                "text": "ImmutableBlobStorage"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "2514B938-A250-474A-829E-18AD6A8F6ACF",
+              "name": "SystemAssignedManagedIdentityVMLinux",
+              "fullDescription": {
+                "text": "SystemAssignedManagedIdentityVMLinux"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "9FC08A73-269A-4C2C-9BDB-EFA0165156E4",
+              "name": "EncryptDiskVMLinux",
+              "fullDescription": {
+                "text": "EncryptDiskVMLinux"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "0EA23566-2FC0-422B-AF9E-42FF4E318B35",
+              "name": "StandardSSDVMLinux",
+              "fullDescription": {
+                "text": "StandardSSDVMLinux"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "F20648F3-C6E0-4FA6-960D-BCF75E6A6C16",
+              "name": "AvailabilitySetVMLinux",
+              "fullDescription": {
+                "text": "AvailabilitySetVMLinux"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "07D8DCB1-98B9-42FA-99A8-33DD7BB397E8",
+              "name": "ConfigureAutoscaleVMLinux",
+              "fullDescription": {
+                "text": "ConfigureAutoscaleVMLinux"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "2D884717-EEFC-4AAE-8CFB-3C3B40D68C0E",
+              "name": "LinuxVMAADExtension",
+              "fullDescription": {
+                "text": "LinuxVMAADExtension"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "A54DC06F-8EB9-40F5-BF9C-FFFB9DE34F0D",
+              "name": "LinuxVMGuestConfiguration",
+              "fullDescription": {
+                "text": "LinuxVMGuestConfiguration"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "C25B6E59-8945-4092-9A5A-86E820362823",
+              "name": "DeployLinuxVMinSubnet",
+              "fullDescription": {
+                "text": "DeployLinuxVMinSubnet"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "1AFB18E6-9387-4734-AF31-0AB02CC1BBE8",
+              "name": "LinuxVMBackup",
+              "fullDescription": {
+                "text": "LinuxVMBackup"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "A2843127-B261-4AAD-90B8-97EEDC9BE134",
+              "name": "EnableGeoRedundantBackupMySQL",
+              "fullDescription": {
+                "text": "EnableGeoRedundantBackupMySQL"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "workingDirectory": {
+            "uri": "https://github.com/threatModeler/tmcreate"
+          }
+        },
+        {
+          "startTimeUtc": "2023-09-26T10:59:15.152Z",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///Azure"
+          }
+        }
+      ],
+      "automationDetails": {
+        "id": "tmiacassist"
+      },
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

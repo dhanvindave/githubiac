@@ -1,0 +1,130 @@
+{
+   "Metadata": {
+      "License": "Apache-2.0"
+   },
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Description": "Basic Test Virtual Node",
+   "Resources": {
+      "BasicVirtualNode": {
+         "Type": "AWS::AppMesh::VirtualNode",
+         "Properties": {
+            "VirtualNodeName": "TestVirtualNode",
+            "MeshName": null,
+            "Spec": {
+               "Backends": [
+                  {
+                     "VirtualService": {
+                        "VirtualServiceName": "Backend_1"
+                     }
+                  },
+                  {
+                     "VirtualService": {
+                        "VirtualServiceName": "Backend_2"
+                     }
+                  }
+               ],
+               "Listeners": [
+                  {
+                     "TLS": {
+                        "Certificate": {
+                           "ACM": {
+                              "CertificateArn": "sdfasdfdaf"
+                           }
+                        },
+                        "Mode": "STRICT"
+                     },
+                     "HealthCheck": {
+                        "HealthyThreshold": 2,
+                        "IntervalMillis": 5000,
+                        "Path": "Path",
+                        "Port": 8080,
+                        "Protocol": "http",
+                        "TimeoutMillis": 2000,
+                        "UnhealthyThreshold": 2
+                     },
+                     "PortMapping": {
+                        "Port": 8080,
+                        "Protocol": "http"
+                     }
+                  }
+               ],
+               "ServiceDiscovery": {
+                  "DNS": {
+                     "Hostname": "Hostname"
+                  }
+               },
+               "Logging": {
+                  "AccessLog": {
+                     "File": {
+                        "Path": "Path"
+                     }
+                  }
+               }
+            },
+            "Tags": [
+               {
+                  "Key": "Key1",
+                  "Value": "Value1"
+               },
+               {
+                  "Key": "Key2",
+                  "Value": "Value2"
+               }
+            ],
+            "VirtualNodeSpec": {
+               "BackendDefaults": "",
+               "Backends": [
+                  ""
+               ],
+               "Listeners": [
+                  {
+                     "TLS": {
+                        "Mode": "STRICT"
+                     }
+                  }
+               ],
+               "Logging": "",
+               "ServiceDiscovery": ""
+            }
+         }
+      }
+   },
+   "Outputs": {
+      "VirtualNodeName": {
+         "Description": "Name of the VirtualNode",
+         "Value": {
+            "Fn::GetAtt": [
+               "BasicVirtualNode",
+               "VirtualNodeName"
+            ]
+         }
+      },
+      "MeshName": {
+         "Description": "Name of the Mesh",
+         "Value": {
+            "Fn::GetAtt": [
+               "BasicVirtualNode",
+               "MeshName"
+            ]
+         }
+      },
+      "Arn": {
+         "Description": "Arn of the VirtualNode created",
+         "Value": {
+            "Fn::GetAtt": [
+               "BasicVirtualNode",
+               "Arn"
+            ]
+         }
+      },
+      "Uid": {
+         "Description": "Uid of the VirtualNode created",
+         "Value": {
+            "Fn::GetAtt": [
+               "BasicVirtualNode",
+               "Uid"
+            ]
+         }
+      }
+   }
+}

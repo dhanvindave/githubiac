@@ -1,0 +1,26 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09T00:00:00.000Z",
+    "Description": "Script creates resources for GlueSecurityConfiguration",
+    "Resources": {
+        "GlueSecurityConfiguration": {
+            "Type": "AWS::Glue::SecurityConfiguration",
+            "Properties": {
+                "EncryptionConfiguration": {
+                    "S3Encryptions": {
+                        "KmsKeyArn": "asdasd",
+                        "S3EncryptionMode": "SSE-KMS"
+                    },
+                    "JobBookmarksEncryption": {
+                        "JobBookmarksEncryptionMode": "CSE-KMS",
+                        "KmsKeyArn": "asda"
+                    },
+                    "CloudWatchEncryption": {
+                        "CloudWatchEncryptionMode": "SSE-KMS",
+                        "KmsKeyArn": "asdasd"
+                    }
+                },
+                "Name": "ajsd"
+            }
+        }
+    }
+}

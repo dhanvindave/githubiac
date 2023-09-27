@@ -1,0 +1,72 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "cloudfrontdistribution": {
+            "Type": "AWS::CloudFront::Distribution",
+            "Properties": {
+                "DistributionConfig": {
+                    "OriginGroups": {
+                        "Items": [
+                            ""
+                        ]
+                    },
+                    "ViewerCertificate": {
+                        "MinimumProtocolVersion": "TLSv1.2_2021"
+                    },
+                    "Restrictions": {
+                        "GeoRestriction": {
+                            "Locations": [
+                                "AE"
+                            ],
+                            "RestrictionType": "whitelist"
+                        }
+                    },
+                    "WebACLId": "asdasdsad",
+                    "CacheBehaviors": [
+                        {
+                            "LambdaFunctionAssociations": [
+                                {
+                                    "EventType": "string-value",
+                                    "LambdaFunctionARN": "string-value"
+                                }
+                            ]
+                        }
+                    ],
+                    "DefaultCacheBehavior": {
+                        "FieldLevelEncryptionId": "asad",
+                        "ViewerProtocolPolicy": "redirect-to-https",
+                        "LambdaFunctionAssociations": [
+                            {
+                                "EventType": "string-value",
+                                "LambdaFunctionARN": "string-value"
+                            }
+                        ]
+                    },
+                    "IPV6Enabled": "boolean-value",
+                    "Origins": [
+                        {
+                            "CustomOriginConfig": {
+                                "OriginKeepaliveTimeout": "integer-value",
+                                "OriginReadTimeout": "integer-value"
+                            }
+                        }
+                    ],
+                    "CustomErrorResponses": [
+                        {
+                            "ErrorCachingMinTTL": 5,
+                            "ErrorCode": 404,
+                            "ResponseCode": 4,
+                            "ResponsePagePath": ""
+                        }
+                    ]
+                },
+                "Tags": [
+                    {
+                        "Key": "string-value",
+                        "Value": "string-value"
+                    }
+                ]
+            }
+        }
+    }
+}

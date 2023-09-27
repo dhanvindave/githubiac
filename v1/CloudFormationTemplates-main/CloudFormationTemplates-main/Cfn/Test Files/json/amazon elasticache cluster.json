@@ -1,0 +1,42 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "ElasticacheSecurityGroup": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupDescription": "Elasticache Security Group",
+                "SecurityGroupIngress": [
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": 11211,
+                        "ToPort": 11211,
+                        "SourceSecurityGroupName": {
+                            "Ref": "InstanceSecurityGroup"
+                        }
+                    }
+                ]
+            }
+        },
+        "ElasticacheCluster": {
+            "Type": "AWS::ElastiCache::CacheCluster",
+            "Properties": {
+                "PreferredAvailabilityZones": [
+                    "us-east-2", "ap-southeast-3"
+                ],
+                "Port": "63799",
+                "AZMode": "cross-az",
+                "Engine": "memcached",
+                "CacheNodeType": "cache.t2.micro",
+                "NumCacheNodes": "2",
+                "VpcSecurityGroupIds": [
+                    {
+                        "Fn::GetAtt": [
+                            "ElasticacheSecurityGroup",
+                            "GroupId"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

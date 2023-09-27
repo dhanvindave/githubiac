@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+ mysession:
+    Type: AWS::Macie::Session
+    Properties:
+        FindingPublishingFrequency: ONE_HOUR
+        Status: ENABLED
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.

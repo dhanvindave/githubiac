@@ -1,0 +1,60 @@
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Resources": {
+      "InstanceSecurityGroup": {
+         "Type": "AWS::EC2::SecurityGroupIngress",
+         "Properties": {
+            "GroupDescription": "Allow http to client host",
+            "VpcId": {
+               "Ref": "myVPC"
+            },
+            "SecurityGroupIngress": [
+               {
+                  "IpProtocol": "tcp",
+                  "FromPort": 3389,
+                  "ToPort": 3389,
+                  "CidrIp": "0.0.0.0/0"
+               },
+               {
+                  "IpProtocol": "tcp",
+                  "FromPort": 80,
+                  "ToPort": 80,
+                  "CidrIp": "10.0.1.0/16"
+               }
+            ],
+            "SecurityGroupEgress": [
+               {
+                  "IpProtocol": "tcp",
+                  "FromPort": 22,
+                  "ToPort": 22,
+                  "CidrIp": "0.0.0.0/0"
+               }
+            ]
+         }
+      },
+      "SGBaseIngress": {
+         "Type": "AWS::EC2::SecurityGroupIngress",
+         "Properties": {
+            "SecurityGroupIngress": [
+               {
+                  "ToPort": 3389,
+                  "FromPort": 80,
+                  "CidrIp": ""
+               }
+            ],
+            "GroupId": {
+               "Ref": "SGBase"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 22,
+            "SourceSecurityGroupId": {
+               "Fn::GetAtt": [
+                  "SGBase",
+                  "GroupId"
+               ]
+            }
+         }
+      }
+   }
+}

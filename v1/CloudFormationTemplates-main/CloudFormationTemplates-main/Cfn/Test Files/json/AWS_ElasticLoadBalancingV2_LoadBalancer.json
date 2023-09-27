@@ -1,0 +1,30 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "mydetector": {
+            "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+            "Properties": {
+                "IpAddressType": "",
+                "LoadBalancerAttributes": [
+                    {
+                        "Key": "access_logs.s3.enabled",
+                        "Value": true
+                    },
+                    {
+                        "Key": "deletion_protection.enabled",
+                        "Value": true
+                    }
+                ],
+                "Name": "",
+                "Scheme": "",
+                "SecurityGroups": [
+                    ""
+                ],
+                "SubnetMappings": [],
+                "Subnets": [],
+                "Tags": [],
+                "Type": ""
+            }
+        }
+    }
+}

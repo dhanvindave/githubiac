@@ -1,0 +1,89 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Amazon FSx resources",
+    "Resources": {
+        "WindowsSelfManagedADFileSystemWithAllConfigs": {
+            "Type": "AWS::FSx::FileSystem",
+            "Properties": {
+                "FileSystemType": "WINDOWS",
+                "StorageCapacity": 32,
+                "StorageType": "SSD",
+                "SubnetIds": [
+                    {
+                        "Fn::ImportValue": "MySubnet01"
+                    },
+                    {
+                        "Fn::ImportValue": "MySubnet02"
+                    }
+                ],
+                "SecurityGroupIds": [
+                    {
+                        "Fn::ImportValue": "WindowsIngressSecurityGroupId"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "windows"
+                    }
+                ],
+                "WindowsConfiguration": {
+                    "ThroughputCapacity": 8,
+                    "Aliases": [
+                        "financials.corp.example.com"
+                    ],
+                    "WeeklyMaintenanceStartTime": "4:16:30",
+                    "DailyAutomaticBackupStartTime": "01:00",
+                    "AutomaticBackupRetentionDays": 30,
+                    "CopyTagsToBackups": false,
+                    "DeploymentType": "MULTI_AZ_1",
+                    "PreferredSubnetId": {
+                        "Fn::ImportValue": "MySubnet01"
+                    },
+                    "SelfManagedActiveDirectoryConfiguration": {
+                        "DnsIps": [
+                            {
+                                "Fn::Select": [
+                                    0,
+                                    {
+                                        "Fn::Split": [
+                                            ",",
+                                            {
+                                                "Fn::ImportValue": "MySelfManagedADDnsIpAddresses"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "DomainName": {
+                            "Fn::ImportValue": "SelfManagedADDomainName"
+                        },
+                        "FileSystemAdministratorsGroup": "MyDomainAdminGroup",
+                        "OrganizationalUnitDistinguishedName": "OU=FileSystems,DC=corp,DC=example,DC=com",
+                        "UserName": "Admin",
+                        "Password": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "{{resolve:secretsmanager",
+                                    {
+                                        "Fn::ImportValue": "MySelfManagedADCredentialName"
+                                    },
+                                    "SecretString}}"
+                                ]
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "FileSystemId": {
+            "Value": {
+                "Ref": "WindowsSelfManagedADFileSystemWithAllConfigs"
+            }
+        }
+    }
+}

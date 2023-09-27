@@ -1,0 +1,95 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "TrailName": {
+            "Type": "String"
+        },
+        "BucketName": {
+            "Type": "String"
+        }
+    },
+    "Conditions": {
+        "IsOrganizationsSupported": {
+            "Fn::Equals": [
+                {
+                    "Ref": "AWS::Partition"
+                },
+                "aws"
+            ]
+        }
+    },
+    "Resources": {
+        "Trail": {
+            "Type": "AWS::CloudTrail::Trail",
+            "Properties": {
+                "S3BucketName": {
+                    "Ref": "BucketName"
+                },
+                "S3KeyPrefix": "Uluru",
+                
+                "TrailName": {
+                    "Ref": "TrailName"
+                },
+                "EnableLogFileValidation": "true",
+                "IncludeGlobalServiceEvents": false,
+                "IsMultiRegionTrail": "true",
+                "CloudWatchLogsLogGroupArn": {
+                    "Fn::ImportValue": "TrailLogGroupTestArn"
+                },
+                "CloudWatchLogsRoleArn": {
+                    "Fn::ImportValue": "TrailLogGroupRoleTestArn"
+                },
+                "KMSKeyId": {
+                    "Fn::ImportValue": "TrailKeyTest"
+                },
+                "Tags": [
+                    {
+                        "Key": "TagKeyIntTest",
+                        "Value": "TagValueIntTest"
+                    },
+                    {
+                        "Key": "TagKeyIntTest2",
+                        "Value": "TagValueIntTest2"
+                    }
+                ],
+                "SnsTopicName": "arn:aws:sns:us-east-2:123456789012:MyTopic",
+                "EventSelectors": [
+                    {
+                        "DataResources": [
+                            {
+                                "Type": "AWS::S3::Object",
+                                "Values": [
+                                    {
+                                        "Fn::Sub": "arn:${AWS::Partition}:s3:::"
+                                    }
+                                ]
+                            }
+                        ],
+                        "IncludeManagementEvents": true,
+                        "ReadWriteType": "All"
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "ARN": {
+            "Description": "The trail ARN",
+            "Value": {
+                "Fn::GetAtt": [
+                    "Trail",
+                    "Arn"
+                ]
+            }
+        },
+        "TopicArn": {
+            "Description": "The SnS Topic ARN",
+            "Value": {
+                "Fn::GetAtt": [
+                    "Trail",
+                    "SnsTopicArn"
+                ]
+            }
+        }
+    }
+}

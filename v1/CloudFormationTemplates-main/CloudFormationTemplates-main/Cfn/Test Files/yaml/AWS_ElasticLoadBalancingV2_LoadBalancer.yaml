@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+ myLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties: 
+      IpAddressType: String
+      LoadBalancerAttributes: 
+        - LoadBalancerAttribute
+      Name: String
+      Scheme: String
+      SecurityGroups: 
+        - String
+      SubnetMappings: 
+        - SubnetMapping
+      Subnets: 
+        - String
+      Tags: 
+        - Tag
+      Type: String
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.

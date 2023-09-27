@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Amazon FSx resources
+Resources:
+  WindowsSelfManagedADFileSystemWithAllConfigs:
+    Type: 'AWS::FSx::FileSystem'
+    Properties:
+      FileSystemType: WINDOWS
+      StorageCapacity: 32
+      StorageType: SSD
+      SubnetIds:
+        - !ImportValue MySubnet01
+        - !ImportValue MySubnet02
+      SecurityGroupIds:
+        - !ImportValue WindowsIngressSecurityGroupId
+      Tags:
+        - Key: Name
+          Value: windows
+      WindowsConfiguration:
+        ThroughputCapacity: 8
+        Aliases:
+          - financials.corp.example.com
+        WeeklyMaintenanceStartTime: '4:16:30'
+        DailyAutomaticBackupStartTime: '01:00'
+        AutomaticBackupRetentionDays: 30
+        CopyTagsToBackups: false
+        DeploymentType: MULTI_AZ_1
+        PreferredSubnetId: !ImportValue MySubnet01
+        SelfManagedActiveDirectoryConfiguration:
+          DnsIps:
+            - !Select 
+              - 0
+              - !Split 
+                - ','
+                - !ImportValue MySelfManagedADDnsIpAddresses
+          DomainName: !ImportValue SelfManagedADDomainName
+          FileSystemAdministratorsGroup: MyDomainAdminGroup
+          OrganizationalUnitDistinguishedName: 'OU=FileSystems,DC=corp,DC=example,DC=com'
+          UserName: Admin
+          Password: !Join 
+            - ':'
+            - - '{{resolve:secretsmanager'
+              - !ImportValue MySelfManagedADCredentialName
+              - 'SecretString}}'
+Outputs:
+  FileSystemId:
+    Value: !Ref WindowsSelfManagedADFileSystemWithAllConfigs

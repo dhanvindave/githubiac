@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+ MyFlowLog:
+  Type: AWS::EC2::FlowLog
+  Properties:
+    DeliverLogsPermissionArn: !GetAtt FlowLogRole.Arn
+    LogGroupName: FlowLogsGroup
+    ResourceId: !Ref MyVPC
+    ResourceType: VPC
+    TrafficType: ALL
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.

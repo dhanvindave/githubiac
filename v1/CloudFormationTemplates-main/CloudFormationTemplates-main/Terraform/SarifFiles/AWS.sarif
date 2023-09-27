@@ -1,0 +1,809 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "AEDB5626-AFFA-4E8D-B143-39D2A9199BC6",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Termination protection is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "5f94fe4f1f21e9d67ee8618283c62999"
+          }
+        },
+        {
+          "ruleId": "9cda23b3-8604-40e2-9d65-a6fe9a2dd8e9",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Detailed monitoring is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "072ccedbd12e058289ae4e28d5cbd992"
+          }
+        },
+        {
+          "ruleId": "402ADCE0-1EC7-4219-903E-A142D8037EED",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Access logging not enabled for ELB"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "e75588cedff103cd948aeda7dc02f6c0"
+          }
+        },
+        {
+          "ruleId": "0B919828-9A8C-4C40-AC73-4DA9424B7594",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "ELB is not configured with HTTPS Listener"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 183,
+                  "startColumn": 12,
+                  "endLine": 183
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "1187029d04af771462cca768b75b2899"
+          }
+        },
+        {
+          "ruleId": "68c7013c-c38c-412f-af44-e5ea9de8e3c9",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Resource(s) should not have administrator privileges"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "d96648f094ce7616a78d505cb836664e"
+          }
+        },
+        {
+          "ruleId": "B854ABF5-748A-454E-8043-ECBE5C19AE74",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Lambda Function not configured inside VPC"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "b8ad89d28c2e926963b6f8536bf7d728"
+          }
+        },
+        {
+          "ruleId": "ED47FB07-9004-4DD5-9615-307C937DC0BE",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Lambda environment variables are not encrytped"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "93b529803242b82364f567cd0736865b"
+          }
+        },
+        {
+          "ruleId": "0A08D99C-3A80-49B4-A1D2-651C8174F29D",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "Lambda Function not configured with Code Signing"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "5e0b315d42729891169e298a9b479276"
+          }
+        },
+        {
+          "ruleId": "B854ABF5-748A-454E-8043-ECBE5C19AE74",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Lambda Function not configured inside VPC"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "b8ad89d28c2e926963b6f8536bf7d728"
+          }
+        },
+        {
+          "ruleId": "ED47FB07-9004-4DD5-9615-307C937DC0BE",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Lambda environment variables are not encrytped"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "93b529803242b82364f567cd0736865b"
+          }
+        },
+        {
+          "ruleId": "0A08D99C-3A80-49B4-A1D2-651C8174F29D",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "Lambda Function not configured with Code Signing"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "5e0b315d42729891169e298a9b479276"
+          }
+        },
+        {
+          "ruleId": "22DACA0D-90E8-43AF-8636-834AF5C9542D",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "ACM Certifications is not to be configured with wildcard domains"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 260,
+                  "startColumn": 26,
+                  "endLine": 260
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "7bf887c7d45cd775f7bc96a118c1814b"
+          }
+        },
+        {
+          "ruleId": "A18A8A14-F2D3-4E1E-B22F-4D564D6A77B8",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "API Gateway not configured with private VPC endpoints"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "014baab3fa4e43a21202b8fd346248ed"
+          }
+        },
+        {
+          "ruleId": "146A6BB4-3EB7-4FFA-B450-F0CB3F6E5097",
+          "ruleIndex": 10,
+          "level": "error",
+          "message": {
+            "text": "API Gateway not configured with payload compression"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "7a7608127ced71620c7a4943d7971985"
+          }
+        },
+        {
+          "ruleId": "98466B52-D7A1-41C0-BA09-63F445BB6FD7",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "API Gateway Tracing not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "7d3964d3eb958298b64e5fc3224791ba"
+          }
+        },
+        {
+          "ruleId": "7D3B5EDE-16F3-4957-8F2D-EB18C12B421A",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "API Gateway not configured with SSL Authentication"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "1e0a4be3fdec89b40d854f5ed1925fca"
+          }
+        },
+        {
+          "ruleId": "066B6577-251C-43DF-935B-4A5666C01C39",
+          "ruleIndex": 13,
+          "level": "error",
+          "message": {
+            "text": "API Gateway cache not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "a2f46ebcc63b31d6265279dd6398062f"
+          }
+        },
+        {
+          "ruleId": "fdb3342f-b20b-493d-a9bf-540849bf009a",
+          "ruleIndex": 14,
+          "level": "error",
+          "message": {
+            "text": "API Gateway Logging not configured"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 372,
+                  "startColumn": 12,
+                  "endLine": 372
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "f156697f168bff2d25a9886ff99f1121"
+          }
+        },
+        {
+          "ruleId": "378E0C6C-2567-4699-A623-F0AF9548BADA",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "API Gateway not configured with CloudWatch Metrics"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 372,
+                  "startColumn": 12,
+                  "endLine": 372
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "5cd6d178eeff35cb16c523d0a59364dc"
+          }
+        },
+        {
+          "ruleId": "4EEE36C0-5742-49C3-A38C-DC53BBB99801",
+          "ruleIndex": 16,
+          "level": "error",
+          "message": {
+            "text": "API Gateway cache not encrypted"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 372,
+                  "startColumn": 12,
+                  "endLine": 372
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "5eaf42692b60b978bea54bba5ca74614"
+          }
+        },
+        {
+          "ruleId": "4EEE36C0-5742-49C3-A38C-DC53BBB99801",
+          "ruleIndex": 16,
+          "level": "error",
+          "message": {
+            "text": "API Gateway cache not encrypted"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///AWS",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 372,
+                  "startColumn": 12,
+                  "endLine": 372
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "5eaf42692b60b978bea54bba5ca74614"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "IaC Assist Demo",
+          "version": "1.0",
+          "semanticVersion": "1.0",
+          "rules": [
+            {
+              "id": "AEDB5626-AFFA-4E8D-B143-39D2A9199BC6",
+              "name": "TerminationProtectionEC2Instance",
+              "fullDescription": {
+                "text": "TerminationProtectionEC2Instance"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "9cda23b3-8604-40e2-9d65-a6fe9a2dd8e9",
+              "name": "DetailedMonitoringEC2Instance",
+              "fullDescription": {
+                "text": "DetailedMonitoringEC2Instance"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "402ADCE0-1EC7-4219-903E-A142D8037EED",
+              "name": "EnableAccessLogs",
+              "fullDescription": {
+                "text": "EnableAccessLogs"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "0B919828-9A8C-4C40-AC73-4DA9424B7594",
+              "name": "HTTPSListenerELB",
+              "fullDescription": {
+                "text": "HTTPSListenerELB"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "68c7013c-c38c-412f-af44-e5ea9de8e3c9",
+              "name": "NoAdministratorPrivileges",
+              "fullDescription": {
+                "text": "NoAdministratorPrivileges"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "B854ABF5-748A-454E-8043-ECBE5C19AE74",
+              "name": "RunLambdaInVPC",
+              "fullDescription": {
+                "text": "RunLambdaInVPC"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "ED47FB07-9004-4DD5-9615-307C937DC0BE",
+              "name": "LambdaEnvironmentVariablesEncryption",
+              "fullDescription": {
+                "text": "LambdaEnvironmentVariablesEncryption"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "0A08D99C-3A80-49B4-A1D2-651C8174F29D",
+              "name": "LambdaFunctionCodeSigningConfig",
+              "fullDescription": {
+                "text": "LambdaFunctionCodeSigningConfig"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "22DACA0D-90E8-43AF-8636-834AF5C9542D",
+              "name": "ACMCertifcatesWithWildcardDomains",
+              "fullDescription": {
+                "text": "ACMCertifcatesWithWildcardDomains"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "A18A8A14-F2D3-4E1E-B22F-4D564D6A77B8",
+              "name": "APIGatewayPrivateEndpoint",
+              "fullDescription": {
+                "text": "APIGatewayPrivateEndpoint"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "146A6BB4-3EB7-4FFA-B450-F0CB3F6E5097",
+              "name": "APIGatewayPayloadCompression",
+              "fullDescription": {
+                "text": "APIGatewayPayloadCompression"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "98466B52-D7A1-41C0-BA09-63F445BB6FD7",
+              "name": "APIGatewayTracing",
+              "fullDescription": {
+                "text": "APIGatewayTracing"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "7D3B5EDE-16F3-4957-8F2D-EB18C12B421A",
+              "name": "APIGatewaySSLAuthentication",
+              "fullDescription": {
+                "text": "APIGatewaySSLAuthentication"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "066B6577-251C-43DF-935B-4A5666C01C39",
+              "name": "APIGatewayEnableCache",
+              "fullDescription": {
+                "text": "APIGatewayEnableCache"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "fdb3342f-b20b-493d-a9bf-540849bf009a",
+              "name": "APIGatewayLogging",
+              "fullDescription": {
+                "text": "APIGatewayLogging"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "378E0C6C-2567-4699-A623-F0AF9548BADA",
+              "name": "APIGatewayCloudWatchMetrics",
+              "fullDescription": {
+                "text": "APIGatewayCloudWatchMetrics"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "4EEE36C0-5742-49C3-A38C-DC53BBB99801",
+              "name": "APIGatewayEncryptCache",
+              "fullDescription": {
+                "text": "APIGatewayEncryptCache"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "workingDirectory": {
+            "uri": "https://github.com/threatModeler/tmcreate"
+          }
+        },
+        {
+          "startTimeUtc": "2023-09-26T10:59:12.777Z",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///AWS"
+          }
+        }
+      ],
+      "automationDetails": {
+        "id": "tmiacassist"
+      },
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

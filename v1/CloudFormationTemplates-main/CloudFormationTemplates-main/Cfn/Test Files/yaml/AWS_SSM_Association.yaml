@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  SpecificInstanceIdAssociation:
+    Type: AWS::SSM::Association
+    Properties:
+      Name: AWS-RunShellScript
+      Targets:
+      - Key: InstanceIds
+        Values:
+        - i-1234567890abcdef0
+      Parameters:
+        commands:
+        - ls
+        workingDirectory:
+        - "/"
+      WaitForSuccessTimeoutSeconds: 300,
+      InstanceId: i-809843
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.

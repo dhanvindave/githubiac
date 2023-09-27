@@ -1,0 +1,21 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "BackupPlan resource",
+    "Resources": {
+        "BackupPlan": {
+            "Type": "AWS::Backup::BackupPlan",
+            "Properties": {
+                "BackupPlan": {
+                    "BackupPlanRule": [
+                        {
+                            "Lifecycle": {
+                                "DeleteAfterDays": "990",
+                                "MoveToColdStorageAfterDays": "88"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "DBClusterParameterGroup": {
+            "Type": "AWS::Neptune::DBClusterParameterGroup",
+            "Properties": {
+                "Parameters": {
+                    "Key": "neptune_enable_audit_log",
+                    "Value": "1"
+                }
+            }
+        }
+    }
+}

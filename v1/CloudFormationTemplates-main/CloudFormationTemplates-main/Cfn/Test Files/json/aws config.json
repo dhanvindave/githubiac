@@ -1,0 +1,22 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS Config resources",
+    "Resources": {
+        "DeliveryChannel": {
+            "Type": "AWS::Config::DeliveryChannel",
+            "Properties": {
+                "ConfigSnapshotDeliveryProperties": {
+                    "DeliveryFrequency": "Six_Hours"
+                },
+                "S3BucketName": "asfaf",
+                "SnsTopicARN": "arn:aws:sns:ap-south-1:123456789012:test"
+            }
+        },
+        "ConfigRecorder": {
+            "Type": "AWS::Config::ConfigurationRecorder",
+            "Properties": {
+                "RecordingGroup": "sd"
+            }
+        }
+    }
+}

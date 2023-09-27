@@ -1,0 +1,102 @@
+{
+    "Metadata": {
+        "License": "Apache-2.0"
+    },
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Basic Test Virtual Node",
+    "Resources": {
+        "Prod": {
+            "Type": "AWS::ApiGateway::Stage",
+            "Properties": {
+                "CacheClusterEnabled": "true",
+                "StageName": "Prod",
+                "Description": "Prod Stage",
+                "RestApiId": {
+                    "Ref": "MyRestApi"
+                },
+                "DeploymentId": {
+                    "Ref": "TestDeployment"
+                },
+                "DocumentationVersion": {
+                    "Ref": "MyDocumentationVersion"
+                },
+                "ClientCertificateId": {
+                    "Ref": "ClientCertificate"
+                },
+                "Variables": {
+                    "Stack": "Prod"
+                },
+                "TracingEnabled": "true",
+                "MethodSettings": [
+                    {
+                        "CacheDataEncrypted": "true",
+                        "CachingEnabled": "true",
+                        "ResourcePath": "/",
+                        "LoggingLevel": "INFO",
+                        "HttpMethod": "GET",
+                        "MetricsEnabled": "true",
+                        "DataTraceEnabled": "false"
+                    },
+                    {
+                        "CacheDataEncrypted": "true",
+                        "CachingEnabled": "true",
+                        "ResourcePath": "/stack",
+                        "HttpMethod": "POST",
+                        "LoggingLevel": "INFO",
+                        "MetricsEnabled": "true",
+                        "DataTraceEnabled": "false",
+                        "ThrottlingBurstLimit": "999"
+                    },
+                    {
+                        "CacheDataEncrypted": "true",
+                        "CachingEnabled": "true",
+                        "ResourcePath": "/stack",
+                        "HttpMethod": "GET",
+                        "LoggingLevel": "INFO",
+                        "MetricsEnabled": "true",
+                        "DataTraceEnabled": "false",
+                        "ThrottlingBurstLimit": "555"
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "VirtualNodeName": {
+            "Description": "Name of the VirtualNode",
+            "Value": {
+                "Fn::GetAtt": [
+                    "BasicVirtualNode",
+                    "VirtualNodeName"
+                ]
+            }
+        },
+        "MeshName": {
+            "Description": "Name of the Mesh",
+            "Value": {
+                "Fn::GetAtt": [
+                    "BasicVirtualNode",
+                    "MeshName"
+                ]
+            }
+        },
+        "Arn": {
+            "Description": "Arn of the VirtualNode created",
+            "Value": {
+                "Fn::GetAtt": [
+                    "BasicVirtualNode",
+                    "Arn"
+                ]
+            }
+        },
+        "Uid": {
+            "Description": "Uid of the VirtualNode created",
+            "Value": {
+                "Fn::GetAtt": [
+                    "BasicVirtualNode",
+                    "Uid"
+                ]
+            }
+        }
+    }
+}

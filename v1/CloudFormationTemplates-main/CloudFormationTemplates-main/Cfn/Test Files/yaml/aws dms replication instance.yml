@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  BasicReplicationInstance:
+    Type: 'AWS::DMS::ReplicationInstance'
+    Properties:
+      PubliclyAccessible: 'false'
+      KmsKeyId: asa
+      MultiAZ: 'true'
+      AutoMinorVersionUpgrade: 'true'
+      ReplicationInstanceClass: dms.t2.small

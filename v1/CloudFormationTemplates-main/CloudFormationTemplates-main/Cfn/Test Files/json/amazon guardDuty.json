@@ -1,0 +1,27 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "mydetector": {
+            "Type": "AWS::GuardDuty::Detector",
+            "Properties": {
+                "DataSources": {
+                    "Kubernetes": {
+                        "AuditLogs": {
+                            "Enable": "true"
+                        }
+                    },
+                    "MalwareProtection": {
+                        "ScanEc2InstanceWithFindings": {
+                            "EbsVolumes": "true"
+                        }
+                    },
+                    "S3Logs": {
+                        "Enable": "true"
+                    }
+                },
+                "Enable": true,
+                "FindingPublishingFrequency": "FIFTEEN_MINUTES"
+            }
+        }
+    }
+}

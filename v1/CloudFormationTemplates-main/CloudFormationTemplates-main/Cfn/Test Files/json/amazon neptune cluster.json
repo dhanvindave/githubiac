@@ -1,0 +1,16 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "NeptuneDBCluster": {
+            "Type": "AWS::Neptune::DBCluster",
+            "Properties": {
+                "AutoMinorVersionUpgrade": "true",
+                "StorageEncrypted": "true",
+                "VpcSecurityGroupIds": [
+                    "asda"
+                ],
+                "BackupRetentionPeriod": "1"
+            }
+        }
+    }
+}

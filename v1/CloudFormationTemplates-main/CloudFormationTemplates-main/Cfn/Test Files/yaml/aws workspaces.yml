@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  WorkSpace:
+    Type: 'AWS::WorkSpaces::Workspace'
+    Properties:
+      UserName: ''
+      DirectoryId: '^d-[0-9a-f]{8,63}$'
+      BundleId: '^wsb-[0-9a-z]{8,63}$'
+      RootVolumeEncryptionEnabled: 'true'
+      UserVolumeEncryptionEnabled: 'true'
+      VolumeEncryptionKey: asad

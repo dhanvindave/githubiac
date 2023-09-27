@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+ mydetector:
+    Type: AWS::DLM::LifecyclePolicy
+    Properties: 
+      Description: String
+      ExecutionRoleArn: String
+      PolicyDetails: 
+        PolicyDetails
+      State: String
+      Tags: 
+        - Tag
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.

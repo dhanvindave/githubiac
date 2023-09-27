@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS Redshift Cluster resources
+Resources:
+  myCluster:
+    Type: 'AWS::Redshift::Cluster'
+    Properties:
+      AllowVersionUpgrade: 'true'
+      Encrypted: 'true'
+      PubliclyAccessible: 'false'
+      LoggingProperties:
+        BucketName: asas
+      DBName: mydb
+      MasterUsername: master
+      MasterUserPassword: !Ref MasterUserPassword
+      NodeType: ds2.xlarge
+      ClusterType: single-node

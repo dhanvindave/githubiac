@@ -1,0 +1,3617 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "93A79177-7063-44A6-B63B-413EADE5CCB4",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "API keys should be restricted to use only by specified hosts and apps"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "15564b91500089042579af327bbeaac8"
+          }
+        },
+        {
+          "ruleId": "D05F6E2A-5169-4D34-AB9C-0ECBD34D663A",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Custom role changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "6aa934a4e51d61c03c18e363b4e2cfee"
+          }
+        },
+        {
+          "ruleId": "4BF839F4-D510-4E05-A759-EBCA02531181",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Audit configuration changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "87f6fd7ddb8fdc412e6cfac6b076f5e5"
+          }
+        },
+        {
+          "ruleId": "6B1B80F6-0772-4408-A0E4-AB2A70BAC924",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Cloud Storage IAM permission changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "c7095673ade4ada576bf7cd760a2b468"
+          }
+        },
+        {
+          "ruleId": "C0685BB9-5203-47F5-A4A1-5CAA1822F8A1",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Project ownership changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "7da86f5d8ea08a4d648f27dd7d3bbadb"
+          }
+        },
+        {
+          "ruleId": "979877DC-0327-4B00-A464-86442B3A9C7D",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "SQL instance configuration changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3f360bb57c68b27172bb724b3c5b80e2"
+          }
+        },
+        {
+          "ruleId": "F6A84053-9030-47E6-AB41-928A57DAA7E6",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "VPC network changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "426567db05d29ebade624f99f1031b32"
+          }
+        },
+        {
+          "ruleId": "81087DCA-07EC-4765-A0B8-81E508118D69",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "VPC network firewall rule changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "9e4f89aad6cbccc6b27d257f4456cec0"
+          }
+        },
+        {
+          "ruleId": "C0CDD433-A7E5-4650-B937-E9416738CF87",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "VPC network route changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "084b8724f89502e3276d63091072500b"
+          }
+        },
+        {
+          "ruleId": "54B808D1-A053-402B-BDAB-1277039D7B2B",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "Cloud Audit Logging should be configured properly across all services and all users from a project"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "851e02147ff887c235c1373c8b44d2ca"
+          }
+        },
+        {
+          "ruleId": "44B20DB5-B92B-43B6-B4C9-A5E68C0BADF7",
+          "ruleIndex": 10,
+          "level": "error",
+          "message": {
+            "text": "A sink with no filter should be configured for every project or the folder or containing that project"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "cf7e23b6aa153d588a59f6cbca64ed07"
+          }
+        },
+        {
+          "ruleId": "82F1DBB1-AFA4-4DD0-A5C1-2942BC92558B",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "There should be a policy preventing the creation of user managed-keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "c17a794728eb4b488ab4f37b9b41ce81"
+          }
+        },
+        {
+          "ruleId": "82F1DBB1-AFA4-4DD0-A5C1-2942BC92558B",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "There should be a policy preventing the upload of user managed-keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "c17a794728eb4b488ab4f37b9b41ce81"
+          }
+        },
+        {
+          "ruleId": "746FDB79-1550-4515-976B-C46EA2BA8915",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "Only GCP-managed service account keys should be used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "da7ff1d83ab95ada69aa12ef3247a8ed"
+          }
+        },
+        {
+          "ruleId": "0948BF39-D64B-4E63-AF62-5816192ED764",
+          "ruleIndex": 13,
+          "level": "error",
+          "message": {
+            "text": "A Bigtable instance should have multiple clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 11,
+                  "endLine": 4
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "8fdaccccfe33b88893cb896e3ad2e5e6"
+          }
+        },
+        {
+          "ruleId": "49D90281-5596-478A-BEFE-DDCCBA62551A",
+          "ruleIndex": 14,
+          "level": "error",
+          "message": {
+            "text": "Bigtable tables should only be authenticated to via service accounts"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 13,
+                  "endLine": 40
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3b2084c8f59912da1ce5c9ddacbd5001"
+          }
+        },
+        {
+          "ruleId": "498ABF10-F6F5-460B-9477-C5BA7993CF08",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "No data retention policy configured for Storage Bucket"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "340e62008819e993d0cc0526e5ac962e"
+          }
+        },
+        {
+          "ruleId": "22ACE7F2-763C-4898-AE82-FC66A571480C",
+          "ruleIndex": 16,
+          "level": "error",
+          "message": {
+            "text": "Object versioning for Storage Bucket should be enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "181bbb233f9c1e25a7ef2bec0fa18ada"
+          }
+        },
+        {
+          "ruleId": "22665BA9-C8E5-4526-A68C-8A34CC59F4B9",
+          "ruleIndex": 17,
+          "level": "error",
+          "message": {
+            "text": "Storage Bucket should use Google-managed encryption keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "75223fcfd3a18dfc0676f15e11de4ef7"
+          }
+        },
+        {
+          "ruleId": "F018F57A-EF97-4FF8-A446-45EB08351E0F",
+          "ruleIndex": 18,
+          "level": "error",
+          "message": {
+            "text": "Logging should be enabled for Storage Bucket"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "51fff76403cf5eb99ca393c6a9543c79"
+          }
+        },
+        {
+          "ruleId": "15587D41-F663-4E38-A945-3247233BA3DC",
+          "ruleIndex": 19,
+          "level": "error",
+          "message": {
+            "text": "Race conditions should be prevented in Storage Bucket objects"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3c6449ef3a342f9fb804c8e8a98b3a65"
+          }
+        },
+        {
+          "ruleId": "33992585-7EC5-4BDD-8CB7-D4903C0EAEA5",
+          "ruleIndex": 20,
+          "level": "error",
+          "message": {
+            "text": "Functions should not be able to be called by external client"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "08684747c25a9c83dedb421b8d706a2b"
+          }
+        },
+        {
+          "ruleId": "E26AE6E0-4D42-4039-AC19-EDD34B25C2A5",
+          "ruleIndex": 21,
+          "level": "error",
+          "message": {
+            "text": "Network Policies for Cloud Functions not configured properly"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3f232adbf2d16ea3f6852289994dc90e"
+          }
+        },
+        {
+          "ruleId": "15587D41-F663-4E38-A945-3247233BA3DC",
+          "ruleIndex": 19,
+          "level": "error",
+          "message": {
+            "text": "Race conditions should be prevented in Storage Bucket objects"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3c6449ef3a342f9fb804c8e8a98b3a65"
+          }
+        },
+        {
+          "ruleId": "D4A05CA4-3720-4782-B81A-59BEBFAC6F9D",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Functions should scale to 300 instances or less"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "86d1746f9d83e96909008e6dfd7bf278"
+          }
+        },
+        {
+          "ruleId": "33992585-7EC5-4BDD-8CB7-D4903C0EAEA5",
+          "ruleIndex": 20,
+          "level": "error",
+          "message": {
+            "text": "Functions should not be able to be called by external client"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "08684747c25a9c83dedb421b8d706a2b"
+          }
+        },
+        {
+          "ruleId": "E26AE6E0-4D42-4039-AC19-EDD34B25C2A5",
+          "ruleIndex": 21,
+          "level": "error",
+          "message": {
+            "text": "Network Policies for Cloud Functions not configured properly"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3f232adbf2d16ea3f6852289994dc90e"
+          }
+        },
+        {
+          "ruleId": "F7591403-B61F-40DA-8361-D245FBE11DB0",
+          "ruleIndex": 23,
+          "level": "error",
+          "message": {
+            "text": "No snapshot for Persistent Disk"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "7a26649bfa0a76a7e3fae270fc8a1921"
+          }
+        },
+        {
+          "ruleId": "746FDB79-1550-4515-976B-C46EA2BA8915",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "Only GCP-managed service account keys should be used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "da7ff1d83ab95ada69aa12ef3247a8ed"
+          }
+        },
+        {
+          "ruleId": "E79C9498-56E1-4880-93BA-C5C5524328E6",
+          "ruleIndex": 24,
+          "level": "error",
+          "message": {
+            "text": "Dataproc cluster interactive serial port should be disabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "bb8b993e46070a5688e66da867dc02b0"
+          }
+        },
+        {
+          "ruleId": "422C5426-D17B-47EE-938E-BDC30ECCA67E",
+          "ruleIndex": 25,
+          "level": "error",
+          "message": {
+            "text": "OSLogin should be enabled for Compute Engine instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "ca1ff50c0d891b906075a06a165e7466"
+          }
+        },
+        {
+          "ruleId": "74177616-0A96-4E10-8B3A-EDC5040272D9",
+          "ruleIndex": 26,
+          "level": "error",
+          "message": {
+            "text": "Compute Engine instances should have deletion protection"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "33b07c493870d72895ef9ca38ae73afd"
+          }
+        },
+        {
+          "ruleId": "B0CDB17C-D155-4C54-AF40-3234ED87B435",
+          "ruleIndex": 27,
+          "level": "error",
+          "message": {
+            "text": "Block Project-wide SSH Keys should be enabled for Compute Engine Instances"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "e334d78918384ffd376e0ef481bccea4"
+          }
+        },
+        {
+          "ruleId": "EA81858D-C9D1-42A4-ACB3-5F4E5BC776DE",
+          "ruleIndex": 28,
+          "level": "error",
+          "message": {
+            "text": "Default service account should not be used on Compute Engine instances with full access to Cloud APIs"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "ca57681ed4ccf9313090bfe39653db78"
+          }
+        },
+        {
+          "ruleId": "6C116461-F377-486F-8855-61F96D9972B8",
+          "ruleIndex": 29,
+          "level": "error",
+          "message": {
+            "text": "VPC networks should be custom mode"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "f6a70925bb4cbdea42114ec4ae6c226f"
+          }
+        },
+        {
+          "ruleId": "6C116461-F377-486F-8855-61F96D9972B8",
+          "ruleIndex": 29,
+          "level": "error",
+          "message": {
+            "text": "VPC networks should be custom mode"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "f6a70925bb4cbdea42114ec4ae6c226f"
+          }
+        },
+        {
+          "ruleId": "028DEF7F-84F0-47E8-8D9F-003D65CE5D2D",
+          "ruleIndex": 30,
+          "level": "error",
+          "message": {
+            "text": "Subnet advertisement should be restricted on Google Cloud Router"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "d869bfb31e5a9fc3033b81d8137383ab"
+          }
+        },
+        {
+          "ruleId": "6C116461-F377-486F-8855-61F96D9972B8",
+          "ruleIndex": 29,
+          "level": "error",
+          "message": {
+            "text": "VPC networks should be custom mode"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "f6a70925bb4cbdea42114ec4ae6c226f"
+          }
+        },
+        {
+          "ruleId": "59E773D4-FE9B-44C7-BB5A-D0B6C40AA4C6",
+          "ruleIndex": 31,
+          "level": "error",
+          "message": {
+            "text": "VPC flow logs should be enabled for every subnet"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "acd57b15e06f17d715e2370c97ce72f1"
+          }
+        },
+        {
+          "ruleId": "028DEF7F-84F0-47E8-8D9F-003D65CE5D2D",
+          "ruleIndex": 30,
+          "level": "error",
+          "message": {
+            "text": "Subnet advertisement should be restricted on Google Cloud Router"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "d869bfb31e5a9fc3033b81d8137383ab"
+          }
+        },
+        {
+          "ruleId": "59E773D4-FE9B-44C7-BB5A-D0B6C40AA4C6",
+          "ruleIndex": 31,
+          "level": "error",
+          "message": {
+            "text": "VPC flow logs should be enabled for every subnet"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "acd57b15e06f17d715e2370c97ce72f1"
+          }
+        },
+        {
+          "ruleId": "F7951600-07CE-4F97-9C53-40FAB6AF9F0F",
+          "ruleIndex": 32,
+          "level": "error",
+          "message": {
+            "text": "Kubernetes secrets are not encrypted using Cloud KMS"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "67cc4d73cfc8f131e299d9a3c4a97801"
+          }
+        },
+        {
+          "ruleId": "B4E0947F-BC4F-4183-B70D-C367A9675A67",
+          "ruleIndex": 33,
+          "level": "error",
+          "message": {
+            "text": "Kubernetes RBAC user should be managed with Google Groups"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "21696c05e09202830c62aacc5618f9a9"
+          }
+        },
+        {
+          "ruleId": "DF1D5C2F-7815-46C3-80DF-40E848D50F46",
+          "ruleIndex": 34,
+          "level": "error",
+          "message": {
+            "text": "GKE cluster should be private"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "9b123f2f807f2a07d15633e025bc7fd2"
+          }
+        },
+        {
+          "ruleId": "D0B279DA-92A4-4786-B517-57EB4CC9DE26",
+          "ruleIndex": 35,
+          "level": "error",
+          "message": {
+            "text": "Shielded GKE nodes should be enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "31ce31f8d266ba0cd7d2e9e2373b5b13"
+          }
+        },
+        {
+          "ruleId": "7DC37A0E-C4B7-46F5-9667-44AD9D9DEB5F",
+          "ruleIndex": 36,
+          "level": "error",
+          "message": {
+            "text": "Automatic node repair should be enabled for Kubernetes Clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "a3b288095bf34aa28730b3b6cb5b973e"
+          }
+        },
+        {
+          "ruleId": "2D3F0C5A-8505-4747-A4E0-71D48AB25EBC",
+          "ruleIndex": 37,
+          "level": "error",
+          "message": {
+            "text": "Automatic node upgrades should be enabled for Kubernetes Clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "a104acb0187e15a13499c470176fe7fb"
+          }
+        },
+        {
+          "ruleId": "9BDA4E23-45E1-4C26-8301-732A5144AA29",
+          "ruleIndex": 38,
+          "level": "error",
+          "message": {
+            "text": "Cloud logging should be enabled for Kubernetes Clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "42d8cb5383e8c9dd8d63cc854926dc76"
+          }
+        },
+        {
+          "ruleId": "D288C023-0258-495F-91F1-893391418783",
+          "ruleIndex": 39,
+          "level": "error",
+          "message": {
+            "text": "Cloud monitoring should be enabled for Kubernetes Clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "e0144fc2227c7a9218b89e144aed193f"
+          }
+        },
+        {
+          "ruleId": "5CF5D9F7-C2AA-4FAC-8FAC-EF0D80D7984F",
+          "ruleIndex": 40,
+          "level": "error",
+          "message": {
+            "text": "Kubernetes cluster node image should use Container-Optimized OS"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "5ff01a9a849ddb4a133925354a8e55a4"
+          }
+        },
+        {
+          "ruleId": "32DDF14A-F9A9-495C-B2F7-7AB512DE6F35",
+          "ruleIndex": 41,
+          "level": "error",
+          "message": {
+            "text": "Private cluster should be enabled for Kubernetes Clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "dc349028e2b300d5f3e9e3d1b484532a"
+          }
+        },
+        {
+          "ruleId": "2A6011F8-9139-4D85-836F-49D522313CFB",
+          "ruleIndex": 42,
+          "level": "error",
+          "message": {
+            "text": "Legacy Authorization should be set to disabled for Kubernetes Clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "1ab128e9d1a6153e6f9be219b1077e88"
+          }
+        },
+        {
+          "ruleId": "AE644195-5610-4175-B001-8053CFC01617",
+          "ruleIndex": 43,
+          "level": "error",
+          "message": {
+            "text": "Master authorized networks should be enabled on Kubernetes clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "957ad0a6a16046408af1432f14f54ab4"
+          }
+        },
+        {
+          "ruleId": "0B7103C4-857C-4C91-A2EC-17FE1E315035",
+          "ruleIndex": 44,
+          "level": "error",
+          "message": {
+            "text": "Network policy should be enabled for Kubernetes clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "f74e52dbd7d7b061b5f6e25dd3d766ae"
+          }
+        },
+        {
+          "ruleId": "73E89939-EB49-4205-B97B-76D59D328DD2",
+          "ruleIndex": 45,
+          "level": "error",
+          "message": {
+            "text": "GKE clusters are not VPC-native"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "34847a1b3f02ab2c9ea4127d54c9ff95"
+          }
+        },
+        {
+          "ruleId": "1B7BFEB3-C452-4519-9B65-7040A2C0579A",
+          "ruleIndex": 46,
+          "level": "error",
+          "message": {
+            "text": "Node problem detector should be enabled for Kubernetes Clusters"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "438e3e7a770ebb035fef27ede84694f1"
+          }
+        },
+        {
+          "ruleId": "42A5C5E3-FC66-4946-929E-3BAC220E5D5B",
+          "ruleIndex": 47,
+          "level": "error",
+          "message": {
+            "text": "Kubernetes clusters should not use default service account"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "2b273da6320f6d813396de2ee38558da"
+          }
+        },
+        {
+          "ruleId": "7DC37A0E-C4B7-46F5-9667-44AD9D9DEB5F",
+          "ruleIndex": 36,
+          "level": "error",
+          "message": {
+            "text": "Automatic node repair should be enabled for Kubernetes Node Pools"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "a3b288095bf34aa28730b3b6cb5b973e"
+          }
+        },
+        {
+          "ruleId": "2D3F0C5A-8505-4747-A4E0-71D48AB25EBC",
+          "ruleIndex": 37,
+          "level": "error",
+          "message": {
+            "text": "Automatic node upgrades should be enabled for Kubernetes Node Pools"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "a104acb0187e15a13499c470176fe7fb"
+          }
+        },
+        {
+          "ruleId": "42A5C5E3-FC66-4946-929E-3BAC220E5D5B",
+          "ruleIndex": 47,
+          "level": "error",
+          "message": {
+            "text": "Kubernetes node pool should not use default service account"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "2b273da6320f6d813396de2ee38558da"
+          }
+        },
+        {
+          "ruleId": "498ABF10-F6F5-460B-9477-C5BA7993CF08",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "No data retention policy configured for Storage Bucket"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "340e62008819e993d0cc0526e5ac962e"
+          }
+        },
+        {
+          "ruleId": "22ACE7F2-763C-4898-AE82-FC66A571480C",
+          "ruleIndex": 16,
+          "level": "error",
+          "message": {
+            "text": "Object versioning for Storage Bucket should be enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "181bbb233f9c1e25a7ef2bec0fa18ada"
+          }
+        },
+        {
+          "ruleId": "22665BA9-C8E5-4526-A68C-8A34CC59F4B9",
+          "ruleIndex": 17,
+          "level": "error",
+          "message": {
+            "text": "Storage Bucket should use Google-managed encryption keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "75223fcfd3a18dfc0676f15e11de4ef7"
+          }
+        },
+        {
+          "ruleId": "F018F57A-EF97-4FF8-A446-45EB08351E0F",
+          "ruleIndex": 18,
+          "level": "error",
+          "message": {
+            "text": "Logging should be enabled for Storage Bucket"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "51fff76403cf5eb99ca393c6a9543c79"
+          }
+        },
+        {
+          "ruleId": "498ABF10-F6F5-460B-9477-C5BA7993CF08",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "No data retention policy configured for Storage Bucket"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "340e62008819e993d0cc0526e5ac962e"
+          }
+        },
+        {
+          "ruleId": "22ACE7F2-763C-4898-AE82-FC66A571480C",
+          "ruleIndex": 16,
+          "level": "error",
+          "message": {
+            "text": "Object versioning for Storage Bucket should be enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "181bbb233f9c1e25a7ef2bec0fa18ada"
+          }
+        },
+        {
+          "ruleId": "22665BA9-C8E5-4526-A68C-8A34CC59F4B9",
+          "ruleIndex": 17,
+          "level": "error",
+          "message": {
+            "text": "Storage Bucket should use Google-managed encryption keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "75223fcfd3a18dfc0676f15e11de4ef7"
+          }
+        },
+        {
+          "ruleId": "F018F57A-EF97-4FF8-A446-45EB08351E0F",
+          "ruleIndex": 18,
+          "level": "error",
+          "message": {
+            "text": "Logging should be enabled for Storage Bucket"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "51fff76403cf5eb99ca393c6a9543c79"
+          }
+        },
+        {
+          "ruleId": "2D06A1A5-3819-437A-9B97-D07424CD4B87",
+          "ruleIndex": 48,
+          "level": "error",
+          "message": {
+            "text": "Dataflow should use private IPs"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "a034e4a86a5b9ff8d773dcbdd803043b"
+          }
+        },
+        {
+          "ruleId": "508E6928-DE84-4E7E-8C8A-CEA050925A6C",
+          "ruleIndex": 49,
+          "level": "error",
+          "message": {
+            "text": "Dataproc cluster should container at least 3 instances"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 23,
+                  "endLine": 18
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "983919e60a7cc9427a175660ad699491"
+          }
+        },
+        {
+          "ruleId": "93C29EFF-34A7-44BE-A1B5-0D9579179180",
+          "ruleIndex": 50,
+          "level": "error",
+          "message": {
+            "text": "Logging should be disabled on Dialogflow for protection of privacy and GDPR compliance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 20,
+                  "endLine": 8
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "cc252db5410a4ec800e42d306daa15e8"
+          }
+        },
+        {
+          "ruleId": "1AA58946-1C60-4D78-BA3C-A955F9AA7EF8",
+          "ruleIndex": 51,
+          "level": "error",
+          "message": {
+            "text": "Logging should be enabled for DNS policies"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "87ad5370e390e4486a9c12176f779372"
+          }
+        },
+        {
+          "ruleId": "7B759539-BB60-437F-9997-38D7F018105D",
+          "ruleIndex": 52,
+          "level": "error",
+          "message": {
+            "text": "RSASHA1 should not be used for key-signing or zone-signing keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "f55b299d658bf5b1b2186b075dceeb90"
+          }
+        },
+        {
+          "ruleId": "DBF6908F-BA53-4CE7-8123-C70020FC7257",
+          "ruleIndex": 53,
+          "level": "error",
+          "message": {
+            "text": "Healthcare dataset not using consent store"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "4c1fe46804ce899101cbcd2ead8e8206"
+          }
+        },
+        {
+          "ruleId": "A6DB9B6A-FD17-42EC-9699-8ED6665223E1",
+          "ruleIndex": 54,
+          "level": "error",
+          "message": {
+            "text": "KMS encryption keys should be rotated every 90 days or less"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "06bffe4e4a7d509d49e859bb22d01604"
+          }
+        },
+        {
+          "ruleId": "23D035D1-650E-47B1-A0B4-B06ADB06D2ED",
+          "ruleIndex": 55,
+          "level": "error",
+          "message": {
+            "text": "Cloud Build service account should have access to the crypto key"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "eba9b87aad888f39f3734dcf6af2404c"
+          }
+        },
+        {
+          "ruleId": "D05F6E2A-5169-4D34-AB9C-0ECBD34D663A",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Custom role changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "6aa934a4e51d61c03c18e363b4e2cfee"
+          }
+        },
+        {
+          "ruleId": "4BF839F4-D510-4E05-A759-EBCA02531181",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Audit configuration changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "87f6fd7ddb8fdc412e6cfac6b076f5e5"
+          }
+        },
+        {
+          "ruleId": "6B1B80F6-0772-4408-A0E4-AB2A70BAC924",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Cloud Storage IAM permission changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "c7095673ade4ada576bf7cd760a2b468"
+          }
+        },
+        {
+          "ruleId": "C0685BB9-5203-47F5-A4A1-5CAA1822F8A1",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Project ownership changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "7da86f5d8ea08a4d648f27dd7d3bbadb"
+          }
+        },
+        {
+          "ruleId": "979877DC-0327-4B00-A464-86442B3A9C7D",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "SQL instance configuration changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3f360bb57c68b27172bb724b3c5b80e2"
+          }
+        },
+        {
+          "ruleId": "F6A84053-9030-47E6-AB41-928A57DAA7E6",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "VPC network changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "426567db05d29ebade624f99f1031b32"
+          }
+        },
+        {
+          "ruleId": "81087DCA-07EC-4765-A0B8-81E508118D69",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "VPC network firewall rule changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "9e4f89aad6cbccc6b27d257f4456cec0"
+          }
+        },
+        {
+          "ruleId": "C0CDD433-A7E5-4650-B937-E9416738CF87",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "VPC network route changes should be logged"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "084b8724f89502e3276d63091072500b"
+          }
+        },
+        {
+          "ruleId": "54B808D1-A053-402B-BDAB-1277039D7B2B",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "Cloud Audit Logging should be configured properly across all services and all users from a project"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "851e02147ff887c235c1373c8b44d2ca"
+          }
+        },
+        {
+          "ruleId": "44B20DB5-B92B-43B6-B4C9-A5E68C0BADF7",
+          "ruleIndex": 10,
+          "level": "error",
+          "message": {
+            "text": "A sink with no filter should be configured for every project or the folder or containing that project"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "cf7e23b6aa153d588a59f6cbca64ed07"
+          }
+        },
+        {
+          "ruleId": "82F1DBB1-AFA4-4DD0-A5C1-2942BC92558B",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "There should be a policy preventing the creation of user managed-keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "c17a794728eb4b488ab4f37b9b41ce81"
+          }
+        },
+        {
+          "ruleId": "82F1DBB1-AFA4-4DD0-A5C1-2942BC92558B",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "There should be a policy preventing the upload of user managed-keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "c17a794728eb4b488ab4f37b9b41ce81"
+          }
+        },
+        {
+          "ruleId": "746FDB79-1550-4515-976B-C46EA2BA8915",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "Only GCP-managed service account keys should be used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "da7ff1d83ab95ada69aa12ef3247a8ed"
+          }
+        },
+        {
+          "ruleId": "746FDB79-1550-4515-976B-C46EA2BA8915",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "Only GCP-managed service account keys should be used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "da7ff1d83ab95ada69aa12ef3247a8ed"
+          }
+        },
+        {
+          "ruleId": "746FDB79-1550-4515-976B-C46EA2BA8915",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "Only GCP-managed service account keys should be used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "da7ff1d83ab95ada69aa12ef3247a8ed"
+          }
+        },
+        {
+          "ruleId": "31A58ADF-39C6-470D-A016-3239CF985943",
+          "ruleIndex": 56,
+          "level": "error",
+          "message": {
+            "text": "Cloud builds should be automated"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "8872841b9c055df2126d083403e9075f"
+          }
+        },
+        {
+          "ruleId": "91EAFE45-71E3-4077-B031-DF0FFC007F93",
+          "ruleIndex": 57,
+          "level": "error",
+          "message": {
+            "text": "Automated backups not scheduled for SQL Database instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "dd6d2f9eeaebbee142a34d97fa7d7b43"
+          }
+        },
+        {
+          "ruleId": "688598CE-C180-4D09-AF31-C3581A0BD13D",
+          "ruleIndex": 58,
+          "level": "error",
+          "message": {
+            "text": "Private IP should be configured for SQL"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "620a19205e93a6f28def051af8bc6720"
+          }
+        },
+        {
+          "ruleId": "162D6363-A8B9-4B0F-BD65-FD8DA6610EDE",
+          "ruleIndex": 59,
+          "level": "error",
+          "message": {
+            "text": "SQL Database instance should use TLS SSL"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "9c6b26f248bf4ded6025765dc4ca7ad3"
+          }
+        },
+        {
+          "ruleId": "C7189EBC-67D2-462F-8017-8A3A13F878CF",
+          "ruleIndex": 60,
+          "level": "error",
+          "message": {
+            "text": "SQL Database instance should have private services access configured"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "1fcdbeb1f985d8221003ec8685d097de"
+          }
+        },
+        {
+          "ruleId": "A4CCE9CD-4EAA-4E63-B96F-73D94C718F02",
+          "ruleIndex": 61,
+          "level": "error",
+          "message": {
+            "text": "SQL Database instance should have read replicas"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "2c8809104cb3b017e91eec14b08336c8"
+          }
+        },
+        {
+          "ruleId": "7263C1F6-8D88-479E-A0DE-29FC7D1D3FB9",
+          "ruleIndex": 62,
+          "level": "error",
+          "message": {
+            "text": "SQL Database instances should not be publicly accessible"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "d45eaeeb701c7bf4f77e279754de661f"
+          }
+        },
+        {
+          "ruleId": "F1570C8D-2524-4C20-AA65-27B44F4C2F1A",
+          "ruleIndex": 63,
+          "level": "error",
+          "message": {
+            "text": "Admin user must have password in SQL Database instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "63ff0be0a9b35568da2384da36cbb3af"
+          }
+        },
+        {
+          "ruleId": "6D9A656F-FC0E-426B-B4B1-55E347AF2BF6",
+          "ruleIndex": 64,
+          "level": "error",
+          "message": {
+            "text": "Public IP access to the SQL Database should be restricted"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "fba23140606ef612e5ac8da81c26ab4c"
+          }
+        },
+        {
+          "ruleId": "498ABF10-F6F5-460B-9477-C5BA7993CF08",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "No data retention policy configured for Storage Bucket"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "340e62008819e993d0cc0526e5ac962e"
+          }
+        },
+        {
+          "ruleId": "22ACE7F2-763C-4898-AE82-FC66A571480C",
+          "ruleIndex": 16,
+          "level": "error",
+          "message": {
+            "text": "Object versioning for Storage Bucket should be enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "181bbb233f9c1e25a7ef2bec0fa18ada"
+          }
+        },
+        {
+          "ruleId": "22665BA9-C8E5-4526-A68C-8A34CC59F4B9",
+          "ruleIndex": 17,
+          "level": "error",
+          "message": {
+            "text": "Storage Bucket should use Google-managed encryption keys"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "75223fcfd3a18dfc0676f15e11de4ef7"
+          }
+        },
+        {
+          "ruleId": "F018F57A-EF97-4FF8-A446-45EB08351E0F",
+          "ruleIndex": 18,
+          "level": "error",
+          "message": {
+            "text": "Logging should be enabled for Storage Bucket"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "51fff76403cf5eb99ca393c6a9543c79"
+          }
+        },
+        {
+          "ruleId": "15587D41-F663-4E38-A945-3247233BA3DC",
+          "ruleIndex": 19,
+          "level": "error",
+          "message": {
+            "text": "Race conditions should be prevented in Storage Bucket objects"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///GCP/TF",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3c6449ef3a342f9fb804c8e8a98b3a65"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "IaC Assist Demo",
+          "version": "1.0",
+          "semanticVersion": "1.0",
+          "rules": [
+            {
+              "id": "93A79177-7063-44A6-B63B-413EADE5CCB4",
+              "name": "SpecifyAPIKeyAccess",
+              "fullDescription": {
+                "text": "SpecifyAPIKeyAccess"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "D05F6E2A-5169-4D34-AB9C-0ECBD34D663A",
+              "name": "CustomRoleChangeLogMetricFilter",
+              "fullDescription": {
+                "text": "CustomRoleChangeLogMetricFilter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "4BF839F4-D510-4E05-A759-EBCA02531181",
+              "name": "AuditConfigurationLogMetricFilter",
+              "fullDescription": {
+                "text": "AuditConfigurationLogMetricFilter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "6B1B80F6-0772-4408-A0E4-AB2A70BAC924",
+              "name": "CloudStorageIAMLogMetricFilter",
+              "fullDescription": {
+                "text": "CloudStorageIAMLogMetricFilter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "C0685BB9-5203-47F5-A4A1-5CAA1822F8A1",
+              "name": "ProjectOwnershipLogMetricFilter",
+              "fullDescription": {
+                "text": "ProjectOwnershipLogMetricFilter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "979877DC-0327-4B00-A464-86442B3A9C7D",
+              "name": "SQLConfigLogMetricFilter",
+              "fullDescription": {
+                "text": "SQLConfigLogMetricFilter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "F6A84053-9030-47E6-AB41-928A57DAA7E6",
+              "name": "VPCNetworkMetricFilter",
+              "fullDescription": {
+                "text": "VPCNetworkMetricFilter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "81087DCA-07EC-4765-A0B8-81E508118D69",
+              "name": "VPCNetworkFirewallRuleMetricFilter",
+              "fullDescription": {
+                "text": "VPCNetworkFirewallRuleMetricFilter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "C0CDD433-A7E5-4650-B937-E9416738CF87",
+              "name": "VPCNetworkRouteMetricFilter",
+              "fullDescription": {
+                "text": "VPCNetworkRouteMetricFilter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "54B808D1-A053-402B-BDAB-1277039D7B2B",
+              "name": "ProjectCloudAuditLogging",
+              "fullDescription": {
+                "text": "ProjectCloudAuditLogging"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "44B20DB5-B92B-43B6-B4C9-A5E68C0BADF7",
+              "name": "ProjectSinkConfiguration",
+              "fullDescription": {
+                "text": "ProjectSinkConfiguration"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "82F1DBB1-AFA4-4DD0-A5C1-2942BC92558B",
+              "name": "PreventServiceAccountKeyCreation",
+              "fullDescription": {
+                "text": "PreventServiceAccountKeyCreation"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "746FDB79-1550-4515-976B-C46EA2BA8915",
+              "name": "GoogleManagedServiceAccountKeys",
+              "fullDescription": {
+                "text": "GoogleManagedServiceAccountKeys"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "0948BF39-D64B-4E63-AF62-5816192ED764",
+              "name": "BigtableClusters",
+              "fullDescription": {
+                "text": "BigtableClusters"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "49D90281-5596-478A-BEFE-DDCCBA62551A",
+              "name": "BigtableAuthentication",
+              "fullDescription": {
+                "text": "BigtableAuthentication"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "498ABF10-F6F5-460B-9477-C5BA7993CF08",
+              "name": "StorageBucketRetentionPolicy",
+              "fullDescription": {
+                "text": "StorageBucketRetentionPolicy"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "22ACE7F2-763C-4898-AE82-FC66A571480C",
+              "name": "StorageBucketObjectVersioning",
+              "fullDescription": {
+                "text": "StorageBucketObjectVersioning"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "22665BA9-C8E5-4526-A68C-8A34CC59F4B9",
+              "name": "StorageBucketGoogleEncryptionKeys",
+              "fullDescription": {
+                "text": "StorageBucketGoogleEncryptionKeys"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "F018F57A-EF97-4FF8-A446-45EB08351E0F",
+              "name": "StorageBucketEnableLogging",
+              "fullDescription": {
+                "text": "StorageBucketEnableLogging"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "15587D41-F663-4E38-A945-3247233BA3DC",
+              "name": "PreventRaceConditions",
+              "fullDescription": {
+                "text": "PreventRaceConditions"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "33992585-7EC5-4BDD-8CB7-D4903C0EAEA5",
+              "name": "FunctionsInternalOnly",
+              "fullDescription": {
+                "text": "FunctionsInternalOnly"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "E26AE6E0-4D42-4039-AC19-EDD34B25C2A5",
+              "name": "CloudFunctionNetworkPolicies",
+              "fullDescription": {
+                "text": "CloudFunctionNetworkPolicies"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "D4A05CA4-3720-4782-B81A-59BEBFAC6F9D",
+              "name": "FunctionsScalingBehavior",
+              "fullDescription": {
+                "text": "FunctionsScalingBehavior"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "F7591403-B61F-40DA-8361-D245FBE11DB0",
+              "name": "AutomatePersistentDiskSnapshot",
+              "fullDescription": {
+                "text": "AutomatePersistentDiskSnapshot"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "E79C9498-56E1-4880-93BA-C5C5524328E6",
+              "name": "DisableInteractiveSerialPort",
+              "fullDescription": {
+                "text": "DisableInteractiveSerialPort"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "422C5426-D17B-47EE-938E-BDC30ECCA67E",
+              "name": "EnableOSLogin",
+              "fullDescription": {
+                "text": "EnableOSLogin"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "74177616-0A96-4E10-8B3A-EDC5040272D9",
+              "name": "ComputeEngineDeleteProtection",
+              "fullDescription": {
+                "text": "ComputeEngineDeleteProtection"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "B0CDB17C-D155-4C54-AF40-3234ED87B435",
+              "name": "EnableBlockProjectWideSSHKeys",
+              "fullDescription": {
+                "text": "EnableBlockProjectWideSSHKeys"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "EA81858D-C9D1-42A4-ACB3-5F4E5BC776DE",
+              "name": "ComputeEngineDefaultServiceAccount",
+              "fullDescription": {
+                "text": "ComputeEngineDefaultServiceAccount"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "6C116461-F377-486F-8855-61F96D9972B8",
+              "name": "CustomModeVPC",
+              "fullDescription": {
+                "text": "CustomModeVPC"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "028DEF7F-84F0-47E8-8D9F-003D65CE5D2D",
+              "name": "RestrictSubnetAdvertisement",
+              "fullDescription": {
+                "text": "RestrictSubnetAdvertisement"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "59E773D4-FE9B-44C7-BB5A-D0B6C40AA4C6",
+              "name": "VPCSubnetFlowLogs",
+              "fullDescription": {
+                "text": "VPCSubnetFlowLogs"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "F7951600-07CE-4F97-9C53-40FAB6AF9F0F",
+              "name": "EncryptKubernetesSecretsKMS",
+              "fullDescription": {
+                "text": "EncryptKubernetesSecretsKMS"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "B4E0947F-BC4F-4183-B70D-C367A9675A67",
+              "name": "KubernetesRBACGroups",
+              "fullDescription": {
+                "text": "KubernetesRBACGroups"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "DF1D5C2F-7815-46C3-80DF-40E848D50F46",
+              "name": "GKEIsolateWorkload",
+              "fullDescription": {
+                "text": "GKEIsolateWorkload"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "D0B279DA-92A4-4786-B517-57EB4CC9DE26",
+              "name": "ShieldedNodesKubernetes",
+              "fullDescription": {
+                "text": "ShieldedNodesKubernetes"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "7DC37A0E-C4B7-46F5-9667-44AD9D9DEB5F",
+              "name": "GKEAutoNodeRepair",
+              "fullDescription": {
+                "text": "GKEAutoNodeRepair"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "2D3F0C5A-8505-4747-A4E0-71D48AB25EBC",
+              "name": "GKEAutoNodeUpgrade",
+              "fullDescription": {
+                "text": "GKEAutoNodeUpgrade"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "9BDA4E23-45E1-4C26-8301-732A5144AA29",
+              "name": "GKECloudLogging",
+              "fullDescription": {
+                "text": "GKECloudLogging"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "D288C023-0258-495F-91F1-893391418783",
+              "name": "GKECloudMonitoring",
+              "fullDescription": {
+                "text": "GKECloudMonitoring"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "5CF5D9F7-C2AA-4FAC-8FAC-EF0D80D7984F",
+              "name": "GKEContainerOptimizedOS",
+              "fullDescription": {
+                "text": "GKEContainerOptimizedOS"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "32DDF14A-F9A9-495C-B2F7-7AB512DE6F35",
+              "name": "GKEPrivateCluster",
+              "fullDescription": {
+                "text": "GKEPrivateCluster"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "2A6011F8-9139-4D85-836F-49D522313CFB",
+              "name": "GKEDisableLegacyAuth",
+              "fullDescription": {
+                "text": "GKEDisableLegacyAuth"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "AE644195-5610-4175-B001-8053CFC01617",
+              "name": "GKEMasterAuthorizedNetworks",
+              "fullDescription": {
+                "text": "GKEMasterAuthorizedNetworks"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "0B7103C4-857C-4C91-A2EC-17FE1E315035",
+              "name": "GKENetworkPolicies",
+              "fullDescription": {
+                "text": "GKENetworkPolicies"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "73E89939-EB49-4205-B97B-76D59D328DD2",
+              "name": "VpcNativeClusters",
+              "fullDescription": {
+                "text": "VpcNativeClusters"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "1B7BFEB3-C452-4519-9B65-7040A2C0579A",
+              "name": "GKENodeProblemDetector",
+              "fullDescription": {
+                "text": "GKENodeProblemDetector"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "42A5C5E3-FC66-4946-929E-3BAC220E5D5B",
+              "name": "KubernetesClusterDefaultServiceAccount",
+              "fullDescription": {
+                "text": "KubernetesClusterDefaultServiceAccount"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "2D06A1A5-3819-437A-9B97-D07424CD4B87",
+              "name": "DataflowPublicIPParameter",
+              "fullDescription": {
+                "text": "DataflowPublicIPParameter"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "508E6928-DE84-4E7E-8C8A-CEA050925A6C",
+              "name": "HighAvailabilityDataprocCluster",
+              "fullDescription": {
+                "text": "HighAvailabilityDataprocCluster"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "93C29EFF-34A7-44BE-A1B5-0D9579179180",
+              "name": "DisableDialogflowLogging",
+              "fullDescription": {
+                "text": "DisableDialogflowLogging"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "1AA58946-1C60-4D78-BA3C-A955F9AA7EF8",
+              "name": "EnableDNSSecForZone",
+              "fullDescription": {
+                "text": "EnableDNSSecForZone"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "7B759539-BB60-437F-9997-38D7F018105D",
+              "name": "NoRSASHA1ForDNSKeys",
+              "fullDescription": {
+                "text": "NoRSASHA1ForDNSKeys"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "DBF6908F-BA53-4CE7-8123-C70020FC7257",
+              "name": "ConsentStoresforHealthcareAPIDataset",
+              "fullDescription": {
+                "text": "ConsentStoresforHealthcareAPIDataset"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "A6DB9B6A-FD17-42EC-9699-8ED6665223E1",
+              "name": "RotateKMSKeys",
+              "fullDescription": {
+                "text": "RotateKMSKeys"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "23D035D1-650E-47B1-A0B4-B06ADB06D2ED",
+              "name": "KMSKeyCloudBuildAccess",
+              "fullDescription": {
+                "text": "KMSKeyCloudBuildAccess"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "31A58ADF-39C6-470D-A016-3239CF985943",
+              "name": "AutomateCloudBuilds",
+              "fullDescription": {
+                "text": "AutomateCloudBuilds"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "91EAFE45-71E3-4077-B031-DF0FFC007F93",
+              "name": "SQLAutomatedBackups",
+              "fullDescription": {
+                "text": "SQLAutomatedBackups"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "688598CE-C180-4D09-AF31-C3581A0BD13D",
+              "name": "SQLPrivateIP",
+              "fullDescription": {
+                "text": "SQLPrivateIP"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "162D6363-A8B9-4B0F-BD65-FD8DA6610EDE",
+              "name": "SQLUseSSL",
+              "fullDescription": {
+                "text": "SQLUseSSL"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "C7189EBC-67D2-462F-8017-8A3A13F878CF",
+              "name": "SQLUsePrivateNetwork",
+              "fullDescription": {
+                "text": "SQLUsePrivateNetwork"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "A4CCE9CD-4EAA-4E63-B96F-73D94C718F02",
+              "name": "SQLReadReplicas",
+              "fullDescription": {
+                "text": "SQLReadReplicas"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "7263C1F6-8D88-479E-A0DE-29FC7D1D3FB9",
+              "name": "SQLPubliclyAccessible",
+              "fullDescription": {
+                "text": "SQLPubliclyAccessible"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "F1570C8D-2524-4C20-AA65-27B44F4C2F1A",
+              "name": "SQLRootPassword",
+              "fullDescription": {
+                "text": "SQLRootPassword"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "6D9A656F-FC0E-426B-B4B1-55E347AF2BF6",
+              "name": "SQLRestrictPublicIP",
+              "fullDescription": {
+                "text": "SQLRestrictPublicIP"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "workingDirectory": {
+            "uri": "https://github.com/threatModeler/tmcreate"
+          }
+        },
+        {
+          "startTimeUtc": "2023-09-26T10:59:55.996Z",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///GCP/TF"
+          }
+        }
+      ],
+      "automationDetails": {
+        "id": "tmiacassist"
+      },
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

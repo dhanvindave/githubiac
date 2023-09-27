@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  LightsailInstance:
+    Type: 'AWS::Lightsail::Instance'
+    Properties:
+      AddOns:
+        - AddOnType: AutoSnapshot
+          Status: Enabled

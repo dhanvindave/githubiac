@@ -1,0 +1,141 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "CloudTrail: v0.1.0 -\nCloudTrail Trail, related S3 bucket, and KMS Key for encryption\n",
+    "Parameters": {
+        "BucketName": {
+            "Type": "String",
+            "AllowedPattern": "[a-z][a-z0-9-]*[a-z0-9]*",
+            "Default": "cloudtrail-bucket",
+            "Description": "Name of Amazon S3 bucket to store CloudTrail"
+        },
+        "TrailName": {
+            "Type": "String",
+            "AllowedPattern": "[a-z][a-z0-9-]*[a-z0-9]*",
+            "Default": "my-trail",
+            "Description": "Name of CloudTrail trail"
+        }
+    },
+    "Resources": {
+        "S3Bucket": {
+            "DeletionPolicy": "Retain",
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "WebsiteConfiguration": "",
+                "ObjectLockConfiguration": {
+                    "ObjectLockEnabled": "Enabled",
+                    "Rule": {
+                        "DefaultRetention": {
+                            "Mode": "COMPLIANCE"
+                        }
+                    }
+                },
+                "ObjectLockEnabled": "true",
+                "PublicAccessBlockConfiguration": {
+                    "BlockPublicAcls": "true",
+                    "BlockPublicPolicy": "true",
+                    "IgnorePublicAcls": "true",
+                    "RestrictPublicBuckets": "true"
+                },
+                "LoggingConfiguration": {
+                    "DestinationBucketName": "afsaf"
+                },
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Status": "Enabled",
+                            "Transitions": [
+                                {
+                                    "StorageClass": "DEEP_ARCHIVE"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "AccessControl": "Private",
+                "ReplicationConfiguration": {
+                    "Rules": [
+                        {
+                            "Destination": {
+                                "Bucket": "hhaskd"
+                            },
+                            "Status": "Enabled"
+                        }
+                    ]
+                },
+                "BucketEncryption": {
+                    "ServerSideEncryptionConfiguration": [
+                        {
+                            "BucketKeyEnabled": "true",
+                            "ServerSideEncryptionByDefault": {
+                                "SSEAlgorithm": "AES256"
+                            }
+                        }
+                    ]
+                },
+                "BucketName": {
+                    "Ref": "BucketName"
+                },
+                "VersioningConfiguration": {
+                    "Status": "Enabled"
+                }
+            }
+        },
+        "BucketPolicy": {
+            "Type": "AWS::S3::BucketPolicy",
+            "Properties": {
+                "Bucket": {
+                    "Ref": "S3Bucket"
+                },
+                "PolicyDocument": {
+                    "Statement": [
+                        {
+                            "Sid": "AWSCloudTrailAclCheck",
+                            "Effect": "Allow",
+                            "Principal": "jhgvjv",
+                            "Action": "s3:GetBucketAcl",
+                            "Resource": {
+                                "Fn::Sub": "arn:aws:s3:::${S3Bucket}"
+                            }
+                        },
+                        {
+                            "Sid": "AWSCloudTrailWrite",
+                            "Effect": "Allow",
+                            "Principal": "jok",
+                            "Action": "s3:PutObject",
+                            "Resource": {
+                                "Fn::Sub": "arn:aws:s3:::${S3Bucket}/AWSLogs/${AWS::AccountId}/*"
+                            },
+                            "Condition": {
+                                "StringEquals": {
+                                    "s3:x-amz-acl": "bucket-owner-full-control"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "Trail": {
+            "DependsOn": [
+                "CloudTrailKeyAlias",
+                "BucketPolicy"
+            ],
+            "Type": "AWS::CloudTrail::Trail",
+            "Properties": {
+                "SnsTopicName": "asfafsf",
+                "CloudWatchLogsRoleArn": "afafaf",
+                "CloudWatchLogsLogGroupArn": "asdsfa",
+                "EnableLogFileValidation": "true",
+                "TrailName": {
+                    "Ref": "BucketName"
+                },
+                "IncludeGlobalServiceEvents": true,
+                "IsMultiRegionTrail": true,
+                "S3BucketName": {
+                    "Ref": "S3Bucket"
+                },
+                "IsLogging": true
+            }
+        }
+    }
+}

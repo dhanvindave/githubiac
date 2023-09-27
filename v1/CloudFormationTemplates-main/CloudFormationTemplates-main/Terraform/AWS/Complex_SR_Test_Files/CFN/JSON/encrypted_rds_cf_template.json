@@ -1,0 +1,518 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "VPC with Encrypted RDS Template",
+    "Mappings": {
+        "NetworkToSubnet": {
+            "10.0.0.0": {
+                "PubSubnetZoneA": "10.0.10.0/24",
+                "PrivSubnetZoneA": "10.0.20.0/24",
+                "PubSubnetZoneB": "10.0.30.0/24",
+                "PrivSubnetZoneB": "10.0.40.0/24"
+            }
+        }
+    },
+    "Resources": {
+        "VPC": {
+            "Type": "AWS::EC2::VPC",
+            "Properties": {
+                "CidrBlock": {
+                    "Fn::Join": [
+                        "/",
+                        [
+                            "10.0.0.0",
+                            "16"
+                        ]
+                    ]
+                },
+                "EnableDnsSupport": true,
+                "EnableDnsHostnames": true,
+                "InstanceTenancy": "default",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Ref": "AWS::StackName"
+                        }
+                    }
+                ]
+            }
+        },
+        "PubSubnetZoneA": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "AvailabilityZone": {
+                    "Fn::Select": [
+                        "0",
+                        {
+                            "Fn::GetAZs": {
+                                "Ref": "AWS::Region"
+                            }
+                        }
+                    ]
+                },
+                "CidrBlock": {
+                    "Fn::FindInMap": [
+                        "NetworkToSubnet",
+                        "10.0.0.0",
+                        "PubSubnetZoneA"
+                    ]
+                },
+                "MapPublicIpOnLaunch": "True",
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "Public",
+                                    "Zone A",
+                                    {
+                                        "Ref": "AWS::StackName"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "PrivSubnetZoneA": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "AvailabilityZone": {
+                    "Fn::Select": [
+                        "0",
+                        {
+                            "Fn::GetAZs": {
+                                "Ref": "AWS::Region"
+                            }
+                        }
+                    ]
+                },
+                "CidrBlock": {
+                    "Fn::FindInMap": [
+                        "NetworkToSubnet",
+                        "10.0.0.0",
+                        "PrivSubnetZoneA"
+                    ]
+                },
+                "MapPublicIpOnLaunch": "False",
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "Private",
+                                    "Zone A",
+                                    {
+                                        "Ref": "AWS::StackName"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "PubSubnetZoneB": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "AvailabilityZone": {
+                    "Fn::Select": [
+                        "1",
+                        {
+                            "Fn::GetAZs": {
+                                "Ref": "AWS::Region"
+                            }
+                        }
+                    ]
+                },
+                "CidrBlock": {
+                    "Fn::FindInMap": [
+                        "NetworkToSubnet",
+                        "10.0.0.0",
+                        "PubSubnetZoneB"
+                    ]
+                },
+                "MapPublicIpOnLaunch": "True",
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "Public",
+                                    "Zone B",
+                                    {
+                                        "Ref": "AWS::StackName"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "PrivSubnetZoneB": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "AvailabilityZone": {
+                    "Fn::Select": [
+                        "1",
+                        {
+                            "Fn::GetAZs": {
+                                "Ref": "AWS::Region"
+                            }
+                        }
+                    ]
+                },
+                "CidrBlock": {
+                    "Fn::FindInMap": [
+                        "NetworkToSubnet",
+                        "10.0.0.0",
+                        "PrivSubnetZoneB"
+                    ]
+                },
+                "MapPublicIpOnLaunch": "False",
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "Private",
+                                    "Zone B",
+                                    {
+                                        "Ref": "AWS::StackName"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "InternetGateway": {
+            "Type": "AWS::EC2::InternetGateway",
+            "Properties": {
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Ref": "AWS::StackName"
+                        }
+                    }
+                ]
+            }
+        },
+        "GatewayAttachment": {
+            "Type": "AWS::EC2::VPCGatewayAttachment",
+            "Properties": {
+                "InternetGatewayId": {
+                    "Ref": "InternetGateway"
+                },
+                "VpcId": {
+                    "Ref": "VPC"
+                }
+            }
+        },
+        "RouteTablePubZoneA": {
+            "Type": "AWS::EC2::RouteTable",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "Public",
+                                    "Zone A",
+                                    {
+                                        "Ref": "AWS::StackName"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "RouteTablePubZoneB": {
+            "Type": "AWS::EC2::RouteTable",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "Public",
+                                    "Zone B",
+                                    {
+                                        "Ref": "AWS::StackName"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "RoutePubZoneA": {
+            "DependsOn": [
+                "InternetGateway"
+            ],
+            "Type": "AWS::EC2::Route",
+            "Properties": {
+                "DestinationCidrBlock": "0.0.0.0/0",
+                "GatewayId": {
+                    "Ref": "InternetGateway"
+                },
+                "RouteTableId": {
+                    "Ref": "RouteTablePubZoneA"
+                }
+            }
+        },
+        "RoutePubZoneB": {
+            "DependsOn": [
+                "InternetGateway"
+            ],
+            "Type": "AWS::EC2::Route",
+            "Properties": {
+                "DestinationCidrBlock": "0.0.0.0/0",
+                "GatewayId": {
+                    "Ref": "InternetGateway"
+                },
+                "RouteTableId": {
+                    "Ref": "RouteTablePubZoneB"
+                }
+            }
+        },
+        "RouteAssociationPubSubnetZoneA": {
+            "Type": "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties": {
+                "SubnetId": {
+                    "Ref": "PubSubnetZoneA"
+                },
+                "RouteTableId": {
+                    "Ref": "RouteTablePubZoneA"
+                }
+            }
+        },
+        "RouteAssociationPubSubnetZoneB": {
+            "Type": "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties": {
+                "SubnetId": {
+                    "Ref": "PubSubnetZoneB"
+                },
+                "RouteTableId": {
+                    "Ref": "RouteTablePubZoneB"
+                }
+            }
+        },
+        "RouteTablePrivZoneA": {
+            "Type": "AWS::EC2::RouteTable",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "Private",
+                                    "Zone A",
+                                    {
+                                        "Ref": "AWS::StackName"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "RouteTablePrivZoneB": {
+            "Type": "AWS::EC2::RouteTable",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "Private",
+                                    "Zone B",
+                                    {
+                                        "Ref": "AWS::StackName"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "RouteAssociationPrivSubnetZoneA": {
+            "Type": "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties": {
+                "SubnetId": {
+                    "Ref": "PrivSubnetZoneA"
+                },
+                "RouteTableId": {
+                    "Ref": "RouteTablePrivZoneA"
+                }
+            }
+        },
+        "RouteAssociationPrivSubnetZoneB": {
+            "Type": "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties": {
+                "SubnetId": {
+                    "Ref": "PrivSubnetZoneB"
+                },
+                "RouteTableId": {
+                    "Ref": "RouteTablePrivZoneB"
+                }
+            }
+        },
+        "RDSSecurityGroup": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupName": "RDSSecurityGroup",
+                "VpcId": {
+                    "Ref": "VPC"
+                },
+                "GroupDescription": "Enable MySql access via user defined port",
+                "SecurityGroupIngress": [
+                    {
+                        "CidrIp": "10.0.0.0/16",
+                        "FromPort": 3306,
+                        "IpProtocol": "tcp",
+                        "ToPort": 3306
+                    }
+                ]
+            }
+        },
+        "RDSDBSubnetGroup": {
+            "Type": "AWS::RDS::DBSubnetGroup",
+            "Properties": {
+                "DBSubnetGroupDescription": "description",
+                "DBSubnetGroupName": "RDS_DB_PrivSubnet",
+                "SubnetIds": [
+                    {
+                        "Ref": "PrivSubnetZoneA"
+                    },
+                    {
+                        "Ref": "PrivSubnetZoneB"
+                    }
+                ]
+            }
+        },
+        "rdsKey": {
+            "Type": "AWS::KMS::Key",
+            "Properties": {
+                "EnableKeyRotation": "true",
+                "KeyPolicy": "asd"
+            }
+        },
+        "rdsAlias": {
+            "Type": "AWS::KMS::Alias",
+            "Properties": {
+                "AliasName": "alias/rds",
+                "TargetKeyId": {
+                    "Ref": "rdsKey"
+                }
+            }
+        },
+        "MySQLDatabase": {
+            "Type": "AWS::RDS::DBInstance",
+            "Properties": {
+                "EnableCloudwatchLogsExports": [
+                    "audit"
+                ],
+                "EnableIAMDatabaseAuthentication": "true",
+                "DeletionProtection": "true",
+                "MultiAz": "true",
+                "BackupRetentionPeriod": "9",
+                "AutoMinorVersionUpgrade": "true",
+                "PubliclyAccessible": "false",
+                "Engine": "mariadb",
+                "DBName": "RDS",
+                "StorageEncrypted": true,
+                "KmsKeyId": {
+                    "Ref": "rdsKey"
+                },
+                "MasterUsername": "dbuser",
+                "MasterUserPassword": "Passw0rd!",
+                "DBInstanceClass": "db.t2.small",
+                "AllocatedStorage": 5,
+                "DBSubnetGroupName": {
+                    "Ref": "RDSDBSubnetGroup"
+                },
+                "VPCSecurityGroups": [
+                    {
+                        "Ref": "RDSSecurityGroup"
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "VPC": {
+            "Description": "Virtual Private Cloud",
+            "Value": {
+                "Ref": "VPC"
+            }
+        },
+        "RDSDBSubnetGroup": {
+            "Description": "RDS Private Subnet Group",
+            "Value": {
+                "Ref": "RDSDBSubnetGroup"
+            }
+        },
+        "RDSSecurityGroup": {
+            "Description": "RDS Security Group",
+            "Value": {
+                "Ref": "RDSSecurityGroup"
+            }
+        },
+        "rdsAlias": {
+            "Description": "RDS KMS Encryption Key Alias",
+            "Value": {
+                "Ref": "rdsAlias"
+            }
+        }
+    }
+}

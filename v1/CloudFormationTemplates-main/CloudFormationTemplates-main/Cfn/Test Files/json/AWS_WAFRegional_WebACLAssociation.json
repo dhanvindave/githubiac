@@ -1,0 +1,12 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Resources" : {
+        "MyWebACLAssociation": {
+            "Type": "AWS::WAFRegional::WebACLAssociation",
+            "Properties": {
+              "ResourceArn": { "Ref": "MyLoadBalancer" },
+              "WebACLId": { "Ref": "MyWebACL" }
+            }
+          }
+    }  
+ }

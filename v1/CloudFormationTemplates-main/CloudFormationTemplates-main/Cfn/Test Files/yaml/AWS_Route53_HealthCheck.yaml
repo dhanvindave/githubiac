@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+ myHealthCheck: 
+  Type: 'AWS::Route53::HealthCheck'
+  Properties: 
+    HealthCheckConfig: 
+      IPAddress: 192.0.2.44
+      Port: 80
+      Type: HTTP
+      ResourcePath: '/example/index.html'
+      FullyQualifiedDomainName: example.com
+      RequestInterval: 30
+      FailureThreshold: 3
+    HealthCheckTags: 
+      - 
+        Key: SampleKey1
+        Value: SampleValue1
+      - 
+        Key: SampleKey2
+        Value: SampleValue2
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.

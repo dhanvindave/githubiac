@@ -1,0 +1,67 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  BasicVirtualNode:
+    Type: "AWS::AppMesh::VirtualNode"
+    Properties:
+      VirtualNodeName: "TestVirtualNode"
+      MeshName: !ImportValue TestMeshName
+      Spec:
+        Backends:
+        - VirtualService:
+            VirtualServiceName: "Backend_1"
+        - VirtualService:
+            VirtualServiceName: "Backend_2"
+        Listeners:
+        - HealthCheck:
+            HealthyThreshold: 2
+            IntervalMillis: 5000
+            Path: "Path"
+            Port: 8080
+            Protocol: "http"
+            TimeoutMillis: 2000
+            UnhealthyThreshold: 2
+          PortMapping:
+            Port: 8080
+            Protocol: "http"
+        ServiceDiscovery:
+          DNS:
+            Hostname: "Hostname"
+        Logging:
+          AccessLog:
+            File:
+              Path: "Path"
+      Tags:
+      - Key: "Key1"
+        Value: "Value1"
+      - Key: "Key2"
+        Value: "Value2"
+
+Outputs:
+  VirtualNodeName:
+    Description: Name of the VirtualNode
+    Value:
+      Fn::GetAtt:
+      - BasicVirtualNode
+      - VirtualNodeName
+  MeshName:
+    Description: Name of the Mesh
+    Value:
+      Fn::GetAtt:
+      - BasicVirtualNode
+      - MeshName
+  Arn:
+    Description: Arn of the VirtualNode created
+    Value:
+      Fn::GetAtt:
+      - BasicVirtualNode
+      - Arn
+  Uid:
+    Description: Uid of the VirtualNode created
+    Value:
+      Fn::GetAtt:
+      - BasicVirtualNode
+      - Uid
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.
