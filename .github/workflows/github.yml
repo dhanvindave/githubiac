@@ -35,7 +35,7 @@ jobs:
         repository: DaveChintan/tmhclparser
         token: ${{ secrets.GH_PAT }}
         path: parser
-        ref: sarif
+        ref: filefolderimplementation
         
     - name: Get all changed files
       id: changed-files
