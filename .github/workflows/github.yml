@@ -71,7 +71,7 @@ jobs:
     - name: Check for sarif files
       id: check-sarif
       run: |
-        if [[ "$(ls -R ./SarifResults)" ]]; then
+        if [[ "$(ls -A ./SarifResults)" ]]; then
           echo "non empty"
           echo "empty=false" >> "$GITHUB_OUTPUT"
         else
@@ -91,3 +91,11 @@ jobs:
        uses: github/codeql-action/upload-sarif@v2      
        with:
          sarif_file: ./SarifResults/     
+
+    - uses: EndBug/add-and-commit@v9
+      if: steps.check-sarif.outputs.empty == 'false'
+      with:
+        add: './SarifFiles/'
+        message: Auto commit sarif
+        committer_name: GitHub Actions
+        committer_email: cndave84@github.com
