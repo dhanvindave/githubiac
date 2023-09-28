@@ -20,8 +20,8 @@ locals {
 }
 
 variable "global" {
-  publicly_accessible = false
-  monitoring = true
+  publicly_accessible = true
+  monitoring = false
 }
 
 module "pi" {
