@@ -66,12 +66,12 @@ jobs:
     - name: List Files
       run: |
         ls -all
-        cd ./SarifResults && ls -A
+        cd ./SarifResults && ls -R
 
     - name: Check for sarif files
       id: check-sarif
       run: |
-        if [[ "$(ls -A ./SarifResults/)" ]]; then
+        if [[ "$(ls -R ./SarifResults)" ]]; then
           echo "empty"
           echo "empty=true" >> "$GITHUB_OUTPUT"
         else
