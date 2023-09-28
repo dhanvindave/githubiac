@@ -72,11 +72,10 @@ jobs:
       id: check-sarif
       run: |
         if [[ "$(ls -A ./SarifResults)" ]]; then
-          echo "Not Exists"
           echo  "empty=true" >> "$GITHUB_OUTPUT"
         else
-          echo "Exists"
           echo "empty=false" >> "$GITHUB_OUTPUT"
+        fi
       
     - name: Store SARIF results as Build Artifact
       if: steps.check-sarif.outputs.empty == 'false' 
