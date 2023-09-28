@@ -1,0 +1,432 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "AEDB5626-AFFA-4E8D-B143-39D2A9199BC6",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Termination protection is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 29,
+                  "endLine": 28
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "3e7199305537014a88d009da8807b593"
+          }
+        },
+        {
+          "ruleId": "9cda23b3-8604-40e2-9d65-a6fe9a2dd8e9",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Detailed monitoring is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 16,
+                  "endLine": 29
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "159a247dbb25800a11f936d74cb9e107"
+          }
+        },
+        {
+          "ruleId": "5D4C3F14-77D7-43D3-B898-D4C65C4A7FB4",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "RDS DB Instance is not private"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "e7b2112522b9bf5569e9bf48040ad1b5"
+          }
+        },
+        {
+          "ruleId": "61AC7596-64FD-491F-A8CB-F90EB89D2A73",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Auto Minor Version Upgrade not enabled for RDS DB Instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "4845c0308421ba962cf8135df4d4f7f4"
+          }
+        },
+        {
+          "ruleId": "16DA3CC0-7265-4F23-856E-FA752AB51D94",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Automated Backup not configured for RDS DB Instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "7ca7fe7ad0d58c3f4bb728a6737568bb"
+          }
+        },
+        {
+          "ruleId": "42E82E5D-656A-4CD9-9741-0C76754D142C",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Multi AZ not enabled for RDS DB Instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "bbf5213c5cc52d172d72013f93bb09e4"
+          }
+        },
+        {
+          "ruleId": "09F24B06-A2A1-40B0-A7F2-441786A09496",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Deletion Protection not enabled for RDS DB Instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "41c799201d2125b08c738456a06c5cb5"
+          }
+        },
+        {
+          "ruleId": "48A01956-F9CC-40DE-8BAB-DD54C5673DC0",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "IAM Database Authentication not enabled for RDS DB Instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "bfa06e73cbd65dd8ab1f4195d4fab099"
+          }
+        },
+        {
+          "ruleId": "A18D42DC-5F15-4B37-B1CB-D6D219E147B1",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "CloudWatch Logs Export not configured for RDS DB Instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 38,
+                  "endLine": 32
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "0d5d8a82824cc5880f6a23b48c6405c1"
+          }
+        },
+        {
+          "ruleId": "4605AB40-AB59-4A22-9D39-B5C30AA6F42E",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "EC2 Volume is not encrypted"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc-gitlab.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 15,
+                  "endLine": 49
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "8b1f41948bc59d8977f95a847ddb3838"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "IaC Assist Demo",
+          "version": "1.0",
+          "semanticVersion": "1.0",
+          "rules": [
+            {
+              "id": "AEDB5626-AFFA-4E8D-B143-39D2A9199BC6",
+              "name": "TerminationProtectionEC2Instance",
+              "fullDescription": {
+                "text": "TerminationProtectionEC2Instance"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "9cda23b3-8604-40e2-9d65-a6fe9a2dd8e9",
+              "name": "DetailedMonitoringEC2Instance",
+              "fullDescription": {
+                "text": "DetailedMonitoringEC2Instance"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "5D4C3F14-77D7-43D3-B898-D4C65C4A7FB4",
+              "name": "RDSInstancePubliclyAccessible",
+              "fullDescription": {
+                "text": "RDSInstancePubliclyAccessible"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "61AC7596-64FD-491F-A8CB-F90EB89D2A73",
+              "name": "RDSInstanceAutoMinorVersionUpgrade",
+              "fullDescription": {
+                "text": "RDSInstanceAutoMinorVersionUpgrade"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "16DA3CC0-7265-4F23-856E-FA752AB51D94",
+              "name": "RDSInstanceAutomatedBackup",
+              "fullDescription": {
+                "text": "RDSInstanceAutomatedBackup"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "42E82E5D-656A-4CD9-9741-0C76754D142C",
+              "name": "RDSInstanceMultiAz",
+              "fullDescription": {
+                "text": "RDSInstanceMultiAz"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "09F24B06-A2A1-40B0-A7F2-441786A09496",
+              "name": "RDSInstanceDeletionProtection",
+              "fullDescription": {
+                "text": "RDSInstanceDeletionProtection"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "48A01956-F9CC-40DE-8BAB-DD54C5673DC0",
+              "name": "RDSIAMDatabaseAuthenticationFeature",
+              "fullDescription": {
+                "text": "RDSIAMDatabaseAuthenticationFeature"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "A18D42DC-5F15-4B37-B1CB-D6D219E147B1",
+              "name": "RDSInstanceCloudwatchLogsExports",
+              "fullDescription": {
+                "text": "RDSInstanceCloudwatchLogsExports"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "4605AB40-AB59-4A22-9D39-B5C30AA6F42E",
+              "name": "EncryptEC2Volume",
+              "fullDescription": {
+                "text": "EncryptEC2Volume"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "workingDirectory": {
+            "uri": "https://github.com/threatModeler/tmcreate"
+          }
+        },
+        {
+          "startTimeUtc": "2023-09-28T03:34:05.792Z",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///v1/tf/vpc-gitlab.tf"
+          }
+        }
+      ],
+      "automationDetails": {
+        "id": "tmiacassist"
+      },
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}
