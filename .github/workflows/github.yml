@@ -71,7 +71,7 @@ jobs:
     - name: Check for sarif files
       id: check-sarif
       run: |
-        if [[ "$(ls -A ./SarifResults)" ]]; then
+        if [[ "$(ls -R ./SarifResults | grep *.sarif)" ]]; then
           echo "non empty"
           echo "empty=false" >> "$GITHUB_OUTPUT"
         else
@@ -95,7 +95,7 @@ jobs:
     - uses: EndBug/add-and-commit@v9
       if: steps.check-sarif.outputs.empty == 'false'
       with:
-        add: './SarifFiles/'
+        add: './SarifFiles/*.*'
         message: Auto commit sarif
         committer_name: GitHub Actions
         committer_email: cndave84@github.com
