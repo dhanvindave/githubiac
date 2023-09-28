@@ -39,7 +39,7 @@ resource "aws_db_instance" "default" {
   password             = "foobarbaz"
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
-  max_allocated_storage = 100
+  max_allocated_storage = 10
   storage_encrypted = true
 }
 
