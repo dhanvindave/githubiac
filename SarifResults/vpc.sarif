@@ -185,6 +185,110 @@
           "partialFingerprints": {
             "code": "f96590c4781a7ae1fa9131f15f0f8aa3"
           }
+        },
+        {
+          "ruleId": "AEDB5626-AFFA-4E8D-B143-39D2A9199BC6",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "Termination protection is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "a43260772e88f4a75a5a3ab0e7a4876f"
+          }
+        },
+        {
+          "ruleId": "9cda23b3-8604-40e2-9d65-a6fe9a2dd8e9",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "Detailed monitoring is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "4ac6fdf964244afa33aeaf83bc51ef2b"
+          }
+        },
+        {
+          "ruleId": "AEDB5626-AFFA-4E8D-B143-39D2A9199BC6",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "Termination protection is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 29,
+                  "endLine": 13
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "b69987cab1c5d41f8e8cbd7d5549d5c1"
+          }
+        },
+        {
+          "ruleId": "9cda23b3-8604-40e2-9d65-a6fe9a2dd8e9",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "Detailed monitoring is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///v1/tf/vpc.tf",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 16,
+                  "endLine": 12
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "code": "f503996ee3ccaefe7b9f08ad2599cc9d"
+          }
         }
       ],
       "tool": {
@@ -283,6 +387,32 @@
               "properties": {
                 "precision": "very-high"
               }
+            },
+            {
+              "id": "AEDB5626-AFFA-4E8D-B143-39D2A9199BC6",
+              "name": "TerminationProtectionEC2Instance",
+              "fullDescription": {
+                "text": "TerminationProtectionEC2Instance"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "9cda23b3-8604-40e2-9d65-a6fe9a2dd8e9",
+              "name": "DetailedMonitoringEC2Instance",
+              "fullDescription": {
+                "text": "DetailedMonitoringEC2Instance"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "precision": "very-high"
+              }
             }
           ]
         }
@@ -295,7 +425,7 @@
           }
         },
         {
-          "startTimeUtc": "2023-09-28T03:50:55.238Z",
+          "startTimeUtc": "2023-09-28T18:27:57.036Z",
           "executionSuccessful": true
         }
       ],
