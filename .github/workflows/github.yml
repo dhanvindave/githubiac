@@ -93,7 +93,7 @@ jobs:
          sarif_file: SarifResults
 
     - uses: EndBug/add-and-commit@v9
-      if: steps.check-sarif.outputs.empty == 'false'
+      #if: steps.check-sarif.outputs.empty == 'false'
       with:
         add: './SarifFiles/*.*'
         message: Auto commit sarif
