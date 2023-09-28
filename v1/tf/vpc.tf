@@ -26,8 +26,8 @@ variable "global" {
 
 module "pi" {
   source = "./modules/sql"
-  monitoring = false
-  disable_api_termination = false
+  monitoring = true
+  disable_api_termination = true
 }
 
 resource "aws_instance" "default" {
