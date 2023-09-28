@@ -72,8 +72,10 @@ jobs:
       id: check-sarif
       run: |
         if [[ "$(ls -A ./SarifResults)" ]]; then
-          echo  "empty=true" >> "$GITHUB_OUTPUT"
+          echo "empty"
+          echo "empty=true" >> "$GITHUB_OUTPUT"
         else
+          echo "non empty"
           echo "empty=false" >> "$GITHUB_OUTPUT"
         fi
       
