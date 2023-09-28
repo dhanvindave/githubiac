@@ -51,7 +51,7 @@ jobs:
         echo "FULL_SCAN=${{ github.event.inputs.reason == 'Yes - All Files' }}" >> "$GITHUB_ENV"
         echo "API_KEY=${{ secrets.API_KEY }}" >> "$GITHUB_ENV"
         echo "BASE_URL=${{ secrets.BASE_URL }}" >> "$GITHUB_ENV"
-        
+        echo "THREAT_MODEL_CREATION_TYPE=${{ secrets.THREAT_MODEL_CREATION_TYPE }}" >> "$GITHUB_ENV"
         
     - name: Run parser
       run: |
