@@ -26,7 +26,7 @@ variable "global" {
 
 resource "aws_instance" "default" {
   disable_api_termination = local.disable_api_termination1
-  monitoring = false
+  monitoring = true
 }
 
 resource "aws_db_instance" "default" {
