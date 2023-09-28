@@ -16,7 +16,7 @@ locals {
   encrypted = true
   disable_api_termination = true
   health_check_type = "ELBsdaf "
-  vpc_zone_identifier = ["ez"]
+  vpc_zone_identifier = ["ezz"]
 }
 
 variable "global" {
