@@ -71,7 +71,7 @@ jobs:
     - name: Check for sarif files
       id: check-sarif
       run: |
-        if [[ "$(ls -R ./SarifResults | grep *.sarif)" ]]; then
+        if [[ "$(ls -R ./SarifResults | grep "*.sarif")" ]]; then
           echo "non empty"
           echo "empty=false" >> "$GITHUB_OUTPUT"
         else
