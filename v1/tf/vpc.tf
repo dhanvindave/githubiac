@@ -27,7 +27,7 @@ variable "global" {
 module "pi" {
   source = "./modules/sql"
   monitoring = true
-  disable_api_termination = false
+  disable_api_termination = true
 }
 
 resource "aws_instance" "default" {
@@ -52,7 +52,7 @@ resource "aws_db_instance" "default" {
 resource "aws_ebs_volume" "example" {
   availability_zone = "us-west-2a"
   size = 40
-  encrypted = false
+  encrypted = true
   tags = {
     Name = "hw"
   }
